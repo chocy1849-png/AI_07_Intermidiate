@@ -1,0 +1,31 @@
+rfp-rag-system/
+├── README.md                 ← 프로젝트 소개, 보고서 링크, 협업일지 링크
+├── .gitignore
+├── .env.example              ← API Key 양식만 적어둔 예시 파일
+├── requirements.txt          ← 필요 패키지 목록
+│
+├── data/
+│   ├── raw/                  ← 원본 데이터 (gitignore로 제외됨)
+│   └── processed/            ← 전처리 완료 데이터
+│
+├── src/
+│   ├── data_loader.py        ← 문서 로드 (hwp, pdf)
+│   ├── chunking.py           ← 청킹 처리
+│   ├── embedding.py          ← 임베딩 생성
+│   ├── vector_store.py       ← Vector DB 관련
+│   ├── retrieval.py          ← 검색 기능
+│   ├── generation.py         ← LLM 응답 생성
+│   └── pipeline.py           ← 전체 RAG 파이프라인 통합
+│
+├── experiments/              ← 실험 노트북 및 기록
+│   └── baseline_test.ipynb
+│
+├── evaluation/               ← 평가 관련
+│   ├── eval_questions.json   ← 평가용 질문 세트
+│   └── eval_results.md       ← 평가 결과 기록
+│
+├── docs/
+│   └── report.pdf            ← 최종 보고서
+│
+└── config/
+    └── config.yaml.example   ← 설정 파일 양식
