@@ -36,6 +36,44 @@ MANIFEST
 pip-log.txt
 pip-delete-this-directory.txt
 
+# ===== 프로젝트 보안 관련 =====
+# API Key, 환경 변수
+.env
+*.env
+config.yaml
+secrets/
+
+# SSH Key
+*.pem
+*.key
+id_rsa*
+
+# ===== 원본 데이터 (외부 공유 금지) =====
+data/raw/
+*.hwp
+*.pdf
+data_list.csv
+
+# ===== 모델 파일 (용량 큼) =====
+*.pt
+*.bin
+*.safetensors
+*.onnx
+models/
+
+# ===== Vector DB 로컬 저장 파일 =====
+chroma_db/
+faiss_index/
+*.faiss
+
+# ===== 기타 =====
+*.log
+.DS_Store
+Thumbs.db
+__pycache__/
+.ipynb_checkpoints/
+
+
 # Unit test / coverage reports
 htmlcov/
 .tox/
