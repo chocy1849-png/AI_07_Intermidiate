@@ -1,92 +1,67 @@
 # RFP 기반 RAG Q&A 시스템
 
-## 프로젝트 개요
-100개의 실제 RFP(제안요청서) 문서를 기반으로 RAG 시스템을 구축하여,
-사용자 질문에 맞는 정보를 추출·요약·응답하는 Q&A 서비스입니다.
+## 개요
+100개의 실제 RFP(제안요청서) 문서를 대상으로 한국어 RAG 챗봇을 구축하는 프로젝트입니다.  
+현재 리포지토리에는 다음 범위가 반영되어 있습니다.
 
-현재 프로젝트에는 원본 문서, 메타데이터 CSV, 프로젝트 가이드 문서,
-EDA 노트북 초안이 포함되어 있으며 이후 Retrieval, Generation, 평가 파이프라인을 순차적으로 확장할 예정입니다.
+- 베이스라인 RAG 구축
+- 고도화 1단계 실험 코드
+  - `B-01` Hybrid Retrieval
+  - `B-02` Prefix-v2
+  - `B-03a` CRAG
+  - `B-04` Chunking 실험
+  - `B-05` Table enrichment / OCR 실험
+  - `B-06` Adopted pipeline + generator ceiling check
 
-## 협업일지 링크
-https://www.notion.so/33478f95df758097a75dfb773fbfd123?v=33478f95df75803eaca8000ca8f26df2
+## 현재 채택 상태
+- 기본선: `B-02`
+- 조건부 보강: `B-03a`
+- Generator ceiling: `gpt-5`
 
-## 팀 구성
-| 이름 | 역할 |
-|------|------|
-| 조찬영 | Project Manager |
-| 강하은 |  |
-| 박윤민 |  |
-| 윤성현 |  |
-| 이건호 |  |
+## 실행 전 준비
+이 리포지토리에는 원본 데이터, 전처리 결과, 평가 결과물, Chroma DB가 포함되지 않습니다.
 
-## 기술 스택
-- Python, Jupyter Notebook
-- LangChain
-- OpenAI API (gpt-5-mini, text-embedding-3-small)
-- FAISS / Chroma
-- GCP VM (L4 GPU)
+필수 준비물:
+- `.env` 파일
+  - `OPENAI_API_KEY=...`
+- `processed_data/processed_documents.jsonl`
+- 필요 시 `files/files/` 및 `data_list.csv`
 
-## 현재 파일 구조
-```text
-.
-├─ README.md
-├─ data_list.csv
-├─ 개요_원본.txt
-├─ 프로젝트연속성브리프.txt
-├─ rfp_rag_eda.ipynb
-├─ build_eda_notebook.py
-└─ files/
-   └─ files/
-      ├─ *.hwp
-      ├─ *.pdf
-      └─ *.docx
-```
-
-## 데이터 구성
-- `data_list.csv`
-  - 공고 번호, 공고 차수, 사업명, 사업 금액, 발주 기관, 공개 일자
-  - 입찰 참여 시작일, 입찰 참여 마감일, 사업 요약, 파일형식, 파일명, 텍스트
-- `files/files/`
-  - 실제 RFP 원본 문서 파일 모음
-  - HWP, PDF, 일부 DOCX 파일 포함
-- `개요_원본.txt`
-  - 프로젝트 과제 설명 및 운영 가이드 원본
-- `프로젝트연속성브리프.txt`
-  - 작업 방식, 이전 미션 교훈, 이번 프로젝트 진행 전략 정리
-- `rfp_rag_eda.ipynb`
-  - 메타데이터/텍스트/키워드/클러스터링 기반 EDA 노트북
-
-## 설치 및 실행 방법
-현재는 데이터 탐색 및 설계 단계이며, 애플리케이션 실행용 코드와 패키지 설정 파일은 추후 추가 예정입니다.
+설치:
 
 ```bash
-# 1. 리포지토리 클론
-git clone [리포지토리 URL]
-cd rfp-rag-system
-
-# 2. 가상환경 생성 및 활성화
-python -m venv venv
-# Windows
-venv\\Scripts\\activate
-
-# 3. 패키지 설치
-# requirements.txt 추가 후 아래 명령 실행 예정
-# pip install -r requirements.txt
-
-# 4. 환경 변수 설정
-# .env.example 추가 후 .env 파일 생성 예정
-# OpenAI API Key 등 환경 변수 설정 예정
+python -m venv .venv
+.venv\\Scripts\\activate
+pip install -r requirements.txt
 ```
 
-## 현재 진행 상태
-- 원본 데이터 및 메타데이터 확보 완료
-- 프로젝트 가이드 및 브리프 정리 완료
-- EDA 노트북 초안 작성 완료
-- Retrieval / Generation / 평가 파이프라인은 이후 단계에서 구현 예정
+## 주요 경로
+```text
+.
+├─ evaluation/
+│  ├─ day3_partA_eval_questions_v1.txt
+│  ├─ day4_mini_eval_question_ids_v1.txt
+│  ├─ day4_smoke_eval_question_ids_v1.txt
+│  ├─ day4_b05_group_bc_question_ids_v1.txt
+│  └─ eval_questions_table_v1.txt
+├─ experiments/
+│  ├─ RAG_베이스라인_재현.ipynb
+│  └─ RAG_고도화1단계_재현.ipynb
+├─ 01_컨텍스트_청킹.py
+├─ 02_임베딩_생성_크로마적재.py
+├─ 03_나이브_RAG_베이스라인.py
+├─ ...
+├─ 34_B06_채택파이프라인_평가.py
+├─ 35_B06_비교.py
+├─ rag_공통.py
+├─ rag_bm25.py
+├─ eval_utils.py
+└─ requirements.txt
+```
 
-## 향후 계획
-- 문서 파싱 및 청킹 전략 수립
-- 임베딩 및 Vector DB 구축
-- 메타데이터 필터링 기반 Retrieval 설계
-- 답변 생성 프롬프트 및 모델 비교
-- 평가셋 구축 및 성능 검증
+## 재현 노트북
+- 베이스라인 재현: `experiments/RAG_베이스라인_재현.ipynb`
+- 고도화 1단계 재현: `experiments/RAG_고도화1단계_재현.ipynb`
+
+두 노트북 모두 `PROJECT_ROOT = Path.cwd()`를 기본값으로 사용합니다.  
+노트북 실행 전 작업 폴더가 리포지토리 루트인지 먼저 확인해야 합니다.

@@ -65,6 +65,13 @@ models/
 chroma_db/
 faiss_index/
 *.faiss
+rag_outputs/
+processed_data/
+rfp_rag_chroma_db/
+tmp_hwp5html*/
+*.pkl
+*.pickle
+_codex_patch.ps1
 
 # ===== 기타 =====
 *.log
