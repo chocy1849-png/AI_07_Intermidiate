@@ -1,0 +1,16 @@
+# Day 4 mini eval fixed subset
+# 목적: 중간 고도화 단계에서 full 45문항 대신 빠르게 방향성을 확인
+# 구성: Type 1 4개 / Type 2 4개 / Type 3 2개 / Type 4 2개
+
+Q02
+Q06
+Q07
+Q10
+Q13
+Q16
+Q19
+Q22
+Q29
+Q32
+Q36
+Q43
