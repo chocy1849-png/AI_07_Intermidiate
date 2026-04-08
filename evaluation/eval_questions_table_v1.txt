@@ -1,0 +1,230 @@
+=============================================================
+  RFP RAG 챗봇 — 표 특화 평가 질문셋 v1
+  총 15개 | 3순위(표 enrichment) 평가용
+=============================================================
+
+■ 설계 원칙
+  이 질문셋은 "표 enrichment 전후 성능 차이"를 측정하기 위해 설계됨.
+  반드시 B-00 베이스라인에도 소급 평가하여 기준선을 확보해야 함.
+
+  Group A (5개): PDF table blocks 이미 존재
+    → 베이스라인도 일부 답변 가능
+    → enrichment 전후 비교 기준선 역할
+    → 정답 데이터 확보 용이
+
+  Group B (5개): HWP <표> 마커만 존재, 본문에 내용 없음
+    → 베이스라인은 답변 불가 또는 오답 예상
+    → enrichment 후 정답률이 올라야 함
+    → 표 enrichment 효과의 핵심 측정 대상
+
+  Group C (5개): 표 내용 + 본문 텍스트를 함께 요구하는 복합 질문
+    → 표만 있어도 안되고 본문과 결합해야 완전한 답변 가능
+    → Completeness 지표 개선 여부 측정
+
+  평가 지표 (기존 동일):
+    Faithfulness / Completeness / Groundedness / Relevancy (1~5)
+    judge: gpt-5
+
+  소급 평가 필수:
+    B-00 (표 enrichment 전 베이스라인)
+    B-04 (표 enrichment 후 최종)
+    → 두 결과 비교로 "표 enrichment의 실질적 기여도" 수치화
+
+=============================================================
+GROUP A : PDF table blocks 이미 존재 (5개)
+=============================================================
+
+TA-01
+  question       : 고려대학교 차세대 포털·학사 정보시스템에서 포털시스템이 지원하는
+                   주요 기능을 정리해줘. 통합로그인, 검색, 개인화 기능 위주로.
+  answer_type    : table_factual
+  ground_truth_doc : 고려대학교_차세대 포털·학사 정보시스템 구축사업.pdf
+  ground_truth_hint: table block 2 — 포털시스템 주요내용 (통합로그인, 통합/지능형 검색,
+                     마이페이지, 공지/알림, 개인화, SSO 등)
+  enrichment_needed: X (PDF table block 이미 존재)
+  eval_focus     : PDF 표 블록 활용 여부, 기능 목록 completeness
+
+TA-02
+  question       : 기초과학연구원 극저온시스템 용역에서 "극저온시스템"의 정의가
+                   어떻게 되어 있어? 포함 범위도 같이 알려줘.
+  answer_type    : table_factual
+  ground_truth_doc : 기초과학연구원_2025년도 중이온가속기용 극저온시스템 운전 용역.pdf
+  ground_truth_hint: table block 8 — 용어 정의 표: 극저온시스템 =
+                     SCL3/SCL2 극저온플랜트, 분배시스템, 초전도가속관 저온유지모듈,
+                     기체헬륨 탱크, 액체질소 시스템 등 포함
+  enrichment_needed: X (PDF table block 이미 존재)
+  eval_focus     : 표 내 정의 정확도, 포함 범위 완전성
+
+TA-03
+  question       : 기초과학연구원 극저온시스템 용역에서 "가동기간"과 "휴지기간"의
+                   차이가 뭐야?
+  answer_type    : table_factual
+  ground_truth_doc : 기초과학연구원_2025년도 중이온가속기용 극저온시스템 운전 용역.pdf
+  ground_truth_hint: table block 8 — 가동기간: 냉각 또는 빔서비스를 위해 가동 중인 기간
+                     / 휴지기간: 유지보수 등을 위해 가동을 멈춘 기간
+  enrichment_needed: X (PDF table block 이미 존재)
+  eval_focus     : 두 용어의 정확한 구분, 표 기반 정의 인용
+
+TA-04
+  question       : 서울특별시 지도정보 플랫폼 고도화 용역에서 시스템 연계 현황을
+                   정리해줘. 어떤 부서/기관이 어떤 시스템을 어떻게 활용하는지.
+  answer_type    : table_factual
+  ground_truth_doc : 서울특별시_2024년 지도정보 플랫폼 및 전문활용 연계 시스템 고도화 용역.pdf
+  ground_truth_hint: table block 4 — 시스템 개요 | 담당부서 | 구분 | 활용 내용
+                     (내손안에서울/서울사랑, 서울시 외국어 누리집, Visit Seoul 등)
+  enrichment_needed: X (PDF table block 이미 존재)
+  eval_focus     : 연계 기관/시스템 목록 completeness, 표 구조 이해
+
+TA-05
+  question       : 서울특별시 지도정보 플랫폼 사업에서 스마트서울맵 활용부서 수
+                   목표가 몇 개야? 그 지표의 측정 방법도 알려줘.
+  answer_type    : table_factual
+  ground_truth_doc : 서울특별시_2024년 지도정보 플랫폼 및 전문활용 연계 시스템 고도화 용역.pdf
+  ground_truth_hint: table block 5 — 지표명: 스마트서울맵 활용부서(기관) 수
+                     목표: 20 / 매년 조사 / Open API 및 도시생활지도 활용하는 시/구 부서 수
+  enrichment_needed: X (PDF table block 이미 존재)
+  eval_focus     : 수치 정확도, 지표 설명 포함 여부
+
+
+=============================================================
+GROUP B : HWP <표> 마커만 존재, 본문 내용 없음 (5개)
+=============================================================
+※ 이 5개는 베이스라인에서 정답률이 낮아야 정상.
+  enrichment 후 정답률 상승이 "표 enrichment 효과"의 핵심 근거.
+
+TB-01
+  question       : GKL 그랜드코리아레저 그룹웨어 시스템 구축 사업에서
+                   구축 대상 기능 목록이나 모듈 구성이 어떻게 돼?
+                   시스템 구성표나 기능 분류가 있다면 정리해줘.
+  answer_type    : table_factual
+  ground_truth_doc : 그랜드코리아레저(주)_2024년도 GKL 그룹웨어 시스템 구축 용역.hwp
+  ground_truth_hint: 그룹웨어 모듈 구성 표 (결재, 메신저, 기록물관리 등 기능 목록)
+                     → 현재 본문에는 추진목표/전략만 있고 세부 기능 목록은 표에만 있음
+  enrichment_needed: O (HWP 표 마커만 존재)
+  eval_focus     : 베이스라인 오답/불완전 예상 → enrichment 후 개선 측정
+
+TB-02
+  question       : 국립중앙의료원 차세대 응급의료 상황관리시스템 구축에서
+                   도입 예정인 통신 장비 목록과 대상 지역을 정리해줘.
+  answer_type    : table_factual
+  ground_truth_doc : 국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축」.hwp
+  ground_truth_hint: 도입 장비(CTI, 교환기, IP녹취 등)와 대상 지역(중앙/서울/대전/대구/광주)
+                     → 일부는 본문 텍스트에 있으나, 장비별 수량/규격은 표에만 있음
+  enrichment_needed: O (HWP 표 마커 235개)
+  eval_focus     : 장비 목록 완전성, 지역별 구분 정확도
+
+TB-03
+  question       : 한국가스공사 차세대 ERP 구축 사업에서 신규 도입 예정인
+                   소프트웨어 내역을 정리해줘. 어떤 솔루션들이 포함되나?
+  answer_type    : table_factual
+  ground_truth_doc : 한국가스공사_[재공고]차세대 통합정보시스템(ERP) 구축.hwp
+  ground_truth_hint: 신규 도입 소프트웨어 내역 표 → 본문에는 제목만 있고 내역은 표에만 있음
+  enrichment_needed: O (HWP 표 마커 164개)
+  eval_focus     : 소프트웨어 목록 completeness, 베이스라인 실패 예상
+
+TB-04
+  question       : 서울 디지털성범죄 안심지원센터 통합업무시스템 구축 사업에서
+                   AI 기반 삭제지원 시스템의 주요 기능 요구사항을 정리해줘.
+  answer_type    : table_factual
+  ground_truth_doc : 서울특별시 여성가족재단_(재공고, 협상) 서울 디지털성범죄 안심지원센터.hwp
+  ground_truth_hint: AI 기반 피해촬영물 검출/삭제지원 시스템 요구사항 표
+                     → 본문에는 필요성만 있고 세부 기능 요구사항은 표에만 있음
+  enrichment_needed: O (HWP 표 마커 158개)
+  eval_focus     : AI 기능 요구사항 추출, 베이스라인 실패 예상
+
+TB-05
+  question       : 한국철도공사 모바일오피스 시스템 고도화 용역에서
+                   기존 모바일오피스의 기능 현황이나 탑재 앱 목록이 있어?
+                   현재 제공 중인 서비스 구성을 알고 싶어.
+  answer_type    : table_factual
+  ground_truth_doc : 한국철도공사 (용역)_모바일오피스 시스템 고도화 용역(총체 및 1차).hwp
+  ground_truth_hint: 모바일오피스 현황 기능/앱 목록 표
+                     → 본문에는 일평균 접속자 수 추이만 있고 기능 목록은 표에만 있음
+  enrichment_needed: O (HWP 표 마커 224개)
+  eval_focus     : 기능/앱 목록 completeness, 접속자 수와 구분하여 답변하는지
+
+
+=============================================================
+GROUP C : 표 + 본문 복합 질문 (5개)
+=============================================================
+※ 표만으로도 안되고, 본문 맥락과 결합해야 완전한 답변이 가능.
+  Completeness + Faithfulness 동시 측정.
+
+TC-01
+  question       : 기초과학연구원 극저온시스템 용역에서 "계약자"의 역할이 뭐야?
+                   용어 정의와 실제 수행해야 하는 업무 범위를 같이 알려줘.
+  answer_type    : table_plus_text
+  ground_truth_doc : 기초과학연구원_2025년도 중이온가속기용 극저온시스템 운전 용역.pdf
+  ground_truth_hint: table block 8 (계약자 정의: 본 과업을 수행할 계약상대자) +
+                     본문의 과업 범위 내용 결합
+  enrichment_needed: X (PDF)
+  eval_focus     : 표 정의 + 본문 업무범위 통합 여부, Completeness
+
+TC-02
+  question       : 고려대학교 차세대 포털 시스템에서 학사시스템이 지원해야 하는
+                   기능과, 이 사업의 전체 추진 목적을 연결해서 설명해줘.
+  answer_type    : table_plus_text
+  ground_truth_doc : 고려대학교_차세대 포털·학사 정보시스템 구축사업.pdf
+  ground_truth_hint: table block 2 (학사시스템 기능 목록) + 본문 사업 목적/추진 배경
+  enrichment_needed: X (PDF)
+  eval_focus     : 표 기능 + 본문 목적을 연결하는 통합 답변 품질
+
+TC-03
+  question       : GKL 그룹웨어 사업에서 추진 목표로 제시된 "업무 효율성 증대"를
+                   실현하기 위해 어떤 시스템 기능들이 구축될 예정인지 연결해서 알려줘.
+  answer_type    : table_plus_text
+  ground_truth_doc : 그랜드코리아레저(주)_2024년도 GKL 그룹웨어 시스템 구축 용역.hwp
+  ground_truth_hint: 본문의 추진목표(업무효율성 증대) + 표의 기능 구성 목록
+  enrichment_needed: O (HWP 표 필요)
+  eval_focus     : 본문 목표 + 표 기능 연결, enrichment 전후 completeness 차이
+
+TC-04
+  question       : 국립중앙의료원 응급의료 상황관리시스템 구축에서
+                   중앙상황실과 광역상황실의 역할 차이가 뭐야?
+                   구축되는 기능이나 장비도 달라?
+  answer_type    : table_plus_text
+  ground_truth_doc : 국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축」.hwp
+  ground_truth_hint: 본문(가~마 항목)의 중앙/광역 역할 분리 + 표의 상황실별 구성/장비 내역
+  enrichment_needed: O (HWP 표 필요)
+  eval_focus     : 역할 비교 + 기능/장비 차이, enrichment 전후 completeness 측정
+
+TC-05
+  question       : 서울 디지털성범죄 안심지원센터 사업에서 기존 시스템의 한계가
+                   뭐고, 새로 구축하는 AI 시스템이 그걸 어떻게 해결하는지 설명해줘.
+  answer_type    : table_plus_text
+  ground_truth_doc : 서울특별시 여성가족재단_(재공고, 협상) 서울 디지털성범죄 안심지원센터.hwp
+  ground_truth_hint: 본문(추진배경 - 기존 시스템 한계) + 표(AI 시스템 신규 기능 요구사항)
+  enrichment_needed: O (HWP 표 필요)
+  eval_focus     : 문제→해결 서사 구성, 표 기능과 본문 배경의 결합 품질
+
+
+=============================================================
+■ 평가 실행 지침
+=============================================================
+
+1. 소급 평가 (필수)
+   B-00 베이스라인을 이 15개 질문으로 먼저 평가
+   → Group B 5개에서 낮은 점수 확인 (enrichment 효과의 기준선)
+
+2. enrichment 후 평가
+   B-04 (표 enrichment 완료) 동일 15개 질문 평가
+
+3. 비교 측정 포인트
+   Group A : B-00과 B-04 점수 유사하면 정상 (이미 PDF 표 있음)
+   Group B : B-04에서 유의미한 상승이 있어야 enrichment 효과 입증
+   Group C : Completeness 지표 개선 여부가 핵심
+
+4. judge: gpt-5 동일 사용
+   채점 기준: Faithfulness / Completeness / Groundedness / Relevancy
+
+5. 기대 결과 패턴
+   Group A — B-00: 3.5~4.5 / B-04: 유사 또는 소폭 상승
+   Group B — B-00: 1.0~2.5 / B-04: 3.0~4.5 (큰 폭 상승)
+   Group C — B-00: 2.0~3.0 / B-04: 3.5~4.5 (중간 폭 상승)
+
+   → Group B에서 큰 폭 상승이 확인되면
+     "HWP 표 enrichment가 RAG 성능에 실질적 기여"를 수치로 증명 가능
+
+=============================================================
+  버전: v1 | Day 4 작성 | 실제 table block + HWP 마커 기반
+=============================================================
