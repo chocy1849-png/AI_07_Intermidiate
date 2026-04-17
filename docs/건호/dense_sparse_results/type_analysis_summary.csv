@@ -1,0 +1,5 @@
+﻿type_group,count,top1_match_rate,top1_match_count,top1_diff_count
+TYPE 1,12,1.0,12,0
+TYPE 2,10,0.1,1,9
+TYPE 3,13,0.3077,4,9
+TYPE 4,10,0.7,7,3

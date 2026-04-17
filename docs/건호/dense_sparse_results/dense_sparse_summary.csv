@@ -1,0 +1,6 @@
+﻿group,question_count,eval_count,dense_top1_hit_rate,dense_topk_hit_rate,dense_avg_mrr,sparse_top1_hit_rate,sparse_topk_hit_rate,sparse_avg_mrr
+overall,45,13,0.9231,0.9231,0.9231,0.9231,0.9231,0.9231
+TYPE 1,12,12,1.0,1.0,1.0,1.0,1.0,1.0
+TYPE 2,10,1,0.0,0.0,0.0,0.0,0.0,0.0
+answer_type:comparison,12,1,0.0,0.0,0.0,0.0,0.0,0.0
+answer_type:factual,15,12,1.0,1.0,1.0,1.0,1.0,1.0
