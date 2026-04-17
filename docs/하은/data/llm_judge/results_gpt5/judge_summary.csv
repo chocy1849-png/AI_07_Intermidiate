@@ -1,0 +1,8 @@
+﻿group,total,pass_count,review_count,fail_count,avg_faithfulness_score,avg_completeness_score,avg_groundedness_score,avg_relevancy_score,avg_score
+overall,20,6,4,10,3.25,3.95,3.2,4.8,3.8
+judge_type:comparison,5,0,1,4,2.8,2.8,2.8,4.4,3.2
+judge_type:follow_up,6,2,1,3,3.1667,4.6667,3.1667,5.0,4.0
+judge_type:rejection,4,3,0,1,4.0,5.0,4.0,5.0,4.5
+judge_type:single_doc,5,1,2,2,3.2,3.4,3.0,4.8,3.6
+difficulty:advanced,12,4,2,6,3.5,3.8333,3.5,4.6667,3.875
+difficulty:intermediate,8,2,2,4,2.875,4.125,2.75,5.0,3.6875

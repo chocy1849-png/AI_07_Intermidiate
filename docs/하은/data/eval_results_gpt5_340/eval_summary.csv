@@ -1,0 +1,14 @@
+﻿group,total,correct,accuracy
+전체,340,290,0.8529
+type:multiple_choice,233,209,0.897
+type:short_answer,107,81,0.757
+difficulty:basic,112,100,0.8929
+difficulty:intermediate,130,104,0.8
+difficulty:advanced,98,86,0.8776
+category:advanced,2,2,1.0
+category:basic,3,2,0.6667
+category:common,182,153,0.8407
+category:specific,150,131,0.8733
+category:사업개요,1,0,0.0
+category:사업내용,1,1,1.0
+category:제안서,1,1,1.0

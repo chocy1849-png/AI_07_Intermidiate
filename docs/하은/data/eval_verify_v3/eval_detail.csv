@@ -1,0 +1,341 @@
+﻿id,document_id,document_name,question_type,difficulty,category,question,ground_truth,model_answer,is_correct,elapsed_sec
+DOC001_Q001,DOC001,(사)벤처기업협회_2024년 벤처확인종합관리시스템 기능 고도화 용역사업.hwp,short_answer,basic,common,해당 사업의 총 예산은 얼마인가?,"352,000,000원","352,000,000원",True,0.0
+DOC001_Q002,DOC001,(사)벤처기업협회_2024년 벤처확인종합관리시스템 기능 고도화 용역사업.hwp,short_answer,basic,common,해당 사업의 사업 기간은 얼마인가?,계약일로부터 150일,계약일로부터 150일,True,0.0
+DOC001_Q003,DOC001,(사)벤처기업협회_2024년 벤처확인종합관리시스템 기능 고도화 용역사업.hwp,multiple_choice,intermediate,common,해당 사업의 계약 방식으로 올바른 것은 무엇인가?,제한경쟁입찰,제한경쟁입찰,True,0.0
+DOC001_Q004,DOC001,(사)벤처기업협회_2024년 벤처확인종합관리시스템 기능 고도화 용역사업.hwp,multiple_choice,intermediate,common,제안서 평가의 기술평가와 가격평가의 비율로 올바른 것은 무엇인가?,"기술평가 90%, 가격평가 10%","기술평가 90%, 가격평가 10%",True,0.0
+DOC001_Q005,DOC001,(사)벤처기업협회_2024년 벤처확인종합관리시스템 기능 고도화 용역사업.hwp,short_answer,intermediate,specific,이 사업의 1차 오픈 예정일은 언제인가?,2024-07-10,2024-07-10,True,0.0
+DOC002_Q001,DOC002,(사)부산국제영화제_2024년 BIFF & ACFM 온라인서비스 재개발 및 행사지원시.hwp,multiple_choice,intermediate,specific,해당 사업의 입찰 방식에 포함된 조건으로 올바른 것은 무엇인가?,제한경쟁입찰 (지역 제한),제한경쟁입찰 (지역 제한),True,0.0
+DOC002_Q002,DOC002,(사)부산국제영화제_2024년 BIFF & ACFM 온라인서비스 재개발 및 행사지원시.hwp,short_answer,intermediate,specific,BIFF 공식 웹사이트는 몇 개 언어로 제공되는가?,2개,2개,True,0.0
+DOC002_Q003,DOC002,(사)부산국제영화제_2024년 BIFF & ACFM 온라인서비스 재개발 및 행사지원시.hwp,short_answer,intermediate,specific,이 사업에서 사용하는 데이터베이스(DB)는 무엇인가?,MS SQL Server 2008 이상,MS SQL Server 2008 이상,True,0.0
+DOC002_Q004,DOC002,(사)부산국제영화제_2024년 BIFF & ACFM 온라인서비스 재개발 및 행사지원시.hwp,multiple_choice,advanced,specific,이 사업에서 CDN 환경으로 제공되는 미디어 저장 용량은 얼마인가?,14TB,14TB,True,0.0
+DOC002_Q005,DOC002,(사)부산국제영화제_2024년 BIFF & ACFM 온라인서비스 재개발 및 행사지원시.hwp,short_answer,advanced,specific,이 사업에서 모바일 애플리케이션은 어떤 운영체제로 제공되는가?,"Android, iOS","Android, iOS",True,0.0
+DOC003_Q001,DOC003,(사)한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발.hwp,short_answer,basic,common,해당 사업의 총 예산은 얼마인가?,"150,000,000원","150,000,000원",True,0.0
+DOC003_Q002,DOC003,(사)한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발.hwp,short_answer,basic,common,해당 사업의 사업 기간은 언제까지인가?,2024-12-31,2024-12-31,True,0.0
+DOC003_Q003,DOC003,(사)한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발.hwp,multiple_choice,intermediate,specific,해당 사업의 주요 사업내용으로 올바른 것은 무엇인가?,KUSF 체육특기자 경기기록 관리시스템 신규 개발,KUSF 체육특기자 경기기록 관리시스템 신규 개발,True,0.0
+DOC003_Q004,DOC003,(사)한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발.hwp,short_answer,advanced,specific,KUSF 회원대학 명단 기준으로 총 몇 개 대학이 포함되어 있는가?,136개,136개,True,0.0
+DOC003_Q005,DOC003,(사)한국대학스포츠협의회_KUSF 체육특기자 경기기록 관리시스템 개발.hwp,multiple_choice,intermediate,specific,해당 사업의 입찰 참가 자격요건으로 문서에 명시된 것은 무엇인가?,"직접생산확인증명서(정보시스템개발서비스, 세부품명번호: 8111159901)를 소지한 자","직접생산확인증명서(정보시스템개발서비스, 세부품명번호: 8111159901)를 소지한 자",True,0.0
+DOC004_Q001,DOC004,(재)예술경영지원센터_통합 정보시스템 구축 사전 컨설팅.hwp,short_answer,basic,common,해당 사업의 총 사업 예산은 얼마인가?,"50,000,000원","50,000,000원",True,0.0
+DOC004_Q002,DOC004,(재)예술경영지원센터_통합 정보시스템 구축 사전 컨설팅.hwp,short_answer,basic,common,해당 사업의 사업 관련 담당 부서와 이메일은 무엇인가?,"시각정보팀, shwan@gokams.or.kr","시각정보팀, shwan@gokams.or.kr",True,0.0
+DOC004_Q003,DOC004,(재)예술경영지원센터_통합 정보시스템 구축 사전 컨설팅.hwp,multiple_choice,intermediate,specific,해당 사업의 성격으로 올바른 것은 무엇인가?,통합 정보시스템 구축을 위한 사전 컨설팅 사업,통합 정보시스템 구축을 위한 사전 컨설팅 사업,True,0.0
+DOC004_Q004,DOC004,(재)예술경영지원센터_통합 정보시스템 구축 사전 컨설팅.hwp,multiple_choice,advanced,specific,현재 운영 중인 한국 미술시장 정보시스템의 URL로 올바른 것은 무엇인가?,http://www.k-artmarket.kr,http://www.k-artmarket.kr,True,0.0
+DOC004_Q005,DOC004,(재)예술경영지원센터_통합 정보시스템 구축 사전 컨설팅.hwp,short_answer,advanced,specific,착수 단계에서 제출해야 하는 산출물의 제출기한은 언제인가?,계약 체결 후 10일 이내,계약 체결 후 10일 이내,True,0.0
+DOC005_Q001,DOC005,2025 구미아시아육상경기선수권대회.hwp,short_answer,intermediate,specific,기술능력평가에서 정량적평가와 정성적평가의 점수는 각각 얼마인가?,"20, 70","20, 70",True,0.0
+DOC005_Q002,DOC005,2025 구미아시아육상경기선수권대회.hwp,short_answer,advanced,specific,제안서 발표 참가 가능 최대 인원은?,2,2,True,0.0
+DOC005_Q003,DOC005,2025 구미아시아육상경기선수권대회.hwp,short_answer,basic,common,주관기관은 어디인가요?,2025 구미아시아육상경기선수권대회 조직위원회,2025 구미아시아육상경기선수권대회 조직위원회,True,0.0
+DOC005_Q004,DOC005,2025 구미아시아육상경기선수권대회.hwp,multiple_choice,advanced,specific,다음 중 요구사항 분류 코드와 요구사항 수의 연결로 올바른 것은 무엇인가?,SFR - 8,SFR - 8,True,0.0
+DOC005_Q005,DOC005,2025 구미아시아육상경기선수권대회.hwp,multiple_choice,advanced,common,다음 중 유지보수 기간으로 올바른 것은 무엇인가?,대회 종료시까지,대회 종료시까지,True,0.0
+DOC006_Q001,DOC006,BioIN_의료기기산업 종합정보시스템 기능개선 사업.hwp,short_answer,basic,common,담당자의 연락처는 무엇인가?,043-713-8884,043-713-8884,True,0.0
+DOC006_Q002,DOC006,BioIN_의료기기산업 종합정보시스템 기능개선 사업.hwp,multiple_choice,intermediate,specific,다음 중 본 사업의 주요 수행 내용으로 가장 적절한 것은 무엇인가?,의료기기 산업 종합정보시스템 기능 개선,의료기기 산업 종합정보시스템 기능 개선,True,0.0
+DOC006_Q003,DOC006,BioIN_의료기기산업 종합정보시스템 기능개선 사업.hwp,multiple_choice,intermediate,common,중간보고가 예정된 월은 언제인가?,10월,10월,True,0.0
+DOC006_Q004,DOC006,BioIN_의료기기산업 종합정보시스템 기능개선 사업.hwp,multiple_choice,intermediate,common,다음 중 사업기간으로 올바른 것은 무엇인가?,계약체결일로부터 120일,계약체결일로부터 120일,True,0.0
+DOC006_Q005,DOC006,BioIN_의료기기산업 종합정보시스템 기능개선 사업.hwp,multiple_choice,advanced,specific,다음 중 SFR-010 요구사항에 포함된 기능으로 올바른 것은 무엇인가?,과제참여자별 성과 등록 및 성과 가시화 기능,과제참여자별 성과 등록 및 성과 가시화 기능,True,0.0
+DOC007_Q001,DOC007,KOICA 전자조달_[긴급] [지문] [국제] 우즈베키스탄 열린 의정활동 상하원 .hwp,short_answer,basic,specific,본 사업의 대상 국가는 어디인가?,우즈베키스탄,우즈베키스탄,True,0.0
+DOC007_Q002,DOC007,KOICA 전자조달_[긴급] [지문] [국제] 우즈베키스탄 열린 의정활동 상하원 .hwp,multiple_choice,basic,common,본 사업의 집행 한도액으로 올바른 것은 무엇인가?,"6,758,571,493원","6,758,571,493원",True,0.0
+DOC007_Q003,DOC007,KOICA 전자조달_[긴급] [지문] [국제] 우즈베키스탄 열린 의정활동 상하원 .hwp,multiple_choice,intermediate,specific,다음 중 본 사업의 주요 수행 내용에 해당하는 것은 무엇인가?,국회 방송시스템 구축 및 지역의회 연계 기반 개선,국회 방송시스템 구축 및 지역의회 연계 기반 개선,True,0.0
+DOC007_Q004,DOC007,KOICA 전자조달_[긴급] [지문] [국제] 우즈베키스탄 열린 의정활동 상하원 .hwp,multiple_choice,intermediate,common,본 사업의 용역 종료 시점으로 올바른 것은 무엇인가?,2027년 9월 30일,2027년 9월 30일,True,0.0
+DOC007_Q005,DOC007,KOICA 전자조달_[긴급] [지문] [국제] 우즈베키스탄 열린 의정활동 상하원 .hwp,multiple_choice,advanced,specific,우선협상대상자로 선정되기 위한 기술능력 평가 기준으로 올바른 것은 무엇인가?,기술능력 평가점수가 85% 이상,기술능력 평가점수가 85% 이상,True,0.0
+DOC008_Q001,DOC008,경기도 안양시_호계체육관 배드민턴장 및 탁구장 예약시스템 구축 용역.hwp,short_answer,basic,common,본 사업의 사업예산은 얼마인가?,"49,500,000원","49,500,000원",True,0.0
+DOC008_Q002,DOC008,경기도 안양시_호계체육관 배드민턴장 및 탁구장 예약시스템 구축 용역.hwp,multiple_choice,basic,common,제안서 제출 방법으로 올바른 것은 무엇인가?,방문 제출,방문 제출,True,0.0
+DOC008_Q003,DOC008,경기도 안양시_호계체육관 배드민턴장 및 탁구장 예약시스템 구축 용역.hwp,multiple_choice,intermediate,common,본 사업의 계약방법으로 올바른 것은 무엇인가?,제한경쟁입찰(협상에 의한 계약),제한경쟁입찰(협상에 의한 계약),True,0.0
+DOC008_Q004,DOC008,경기도 안양시_호계체육관 배드민턴장 및 탁구장 예약시스템 구축 용역.hwp,multiple_choice,intermediate,specific,예약시스템 구축은 다음 중 어떤 단계에 포함되는가?,설계 및 개발,설계 및 개발,True,0.0
+DOC008_Q005,DOC008,경기도 안양시_호계체육관 배드민턴장 및 탁구장 예약시스템 구축 용역.hwp,multiple_choice,advanced,specific,다음 중 본 사업에서 구현해야 하는 기능으로 올바른 것은 무엇인가?,키오스크를 통한 예약 및 결제 기능 제공,키오스크를 통한 예약 및 결제 기능 제공,True,0.0
+DOC009_Q001,DOC009,경기도 평택시_2024년도 평택시 버스정보시스템(BIS) 구축사업.hwp,short_answer,basic,common,본 사업의 소요예산은 얼마인가?,"999,494,600원","999,494,600원",True,0.0
+DOC009_Q002,DOC009,경기도 평택시_2024년도 평택시 버스정보시스템(BIS) 구축사업.hwp,multiple_choice,basic,common,본 사업의 사업기간으로 올바른 것은 무엇인가?,착수일로부터 2024년 10월 31일까지,착수일로부터 2024년 10월 31일까지,True,0.0
+DOC009_Q003,DOC009,경기도 평택시_2024년도 평택시 버스정보시스템(BIS) 구축사업.hwp,multiple_choice,intermediate,common,사업자 선정 시 기술제안서와 가격제안서의 평가 비율로 올바른 것은 무엇인가?,"기술 80%, 가격 20%","기술 80%, 가격 20%",True,0.0
+DOC009_Q004,DOC009,경기도 평택시_2024년도 평택시 버스정보시스템(BIS) 구축사업.hwp,multiple_choice,advanced,specific,제안서 제출 서류 중 제안서의 제출 수량은 몇 부인가?,10부,10부,True,0.0
+DOC009_Q005,DOC009,경기도 평택시_2024년도 평택시 버스정보시스템(BIS) 구축사업.hwp,multiple_choice,advanced,specific,버스정보 안내단말기(BIT)의 총 수량은 몇 개인가?,55개,55개,True,0.0
+DOC010_Q001,DOC010,경기도사회서비스원_2024년 통합사회정보시스템 운영지원.hwp,short_answer,basic,common,본 사업의 주관기관은 어디인가?,경기도사회서비스원,경기도사회서비스원,True,0.0
+DOC010_Q002,DOC010,경기도사회서비스원_2024년 통합사회정보시스템 운영지원.hwp,multiple_choice,intermediate,specific,계약문의를 담당하는 부서는 어디인가?,경영지원팀,경영지원팀,True,0.0
+DOC010_Q003,DOC010,경기도사회서비스원_2024년 통합사회정보시스템 운영지원.hwp,multiple_choice,advanced,specific,유지관리 대상 중 사업 관리에 해당하는 기관은?,학대피해노인전용쉼터,학대피해노인전용쉼터,True,0.0
+DOC010_Q004,DOC010,경기도사회서비스원_2024년 통합사회정보시스템 운영지원.hwp,short_answer,intermediate,specific,제안서는 어떤 형식으로 작성해야 하는가?,"한글, 파워포인트","한글, 파워포인트",True,0.0
+DOC010_Q005,DOC010,경기도사회서비스원_2024년 통합사회정보시스템 운영지원.hwp,multiple_choice,intermediate,specific,요구사항 총괄표에서 전체 요구사항 수의 합계는 몇 개인가?,64개,64개,True,0.0
+DOC011_Q001,DOC011,경상북도 봉화군_봉화군 재난통합관리시스템 고도화 사업.hwp,multiple_choice,advanced,specific,완료단계에 제출해야 할 문서는 무엇인가?,완료보고서,완료보고서,True,0.0
+DOC011_Q002,DOC011,경상북도 봉화군_봉화군 재난통합관리시스템 고도화 사업.hwp,multiple_choice,basic,common,본 사업의 사업기간으로 올바른 것은 무엇인가?,착수일로부터 7개월,착수일로부터 7개월,True,0.0
+DOC011_Q003,DOC011,경상북도 봉화군_봉화군 재난통합관리시스템 고도화 사업.hwp,multiple_choice,basic,common,본 사업의 총 사업금액으로 올바른 것은 무엇인가?,"900,000,000원","900,000,000원",True,0.0
+DOC011_Q004,DOC011,경상북도 봉화군_봉화군 재난통합관리시스템 고도화 사업.hwp,multiple_choice,intermediate,specific,용역수행자는 계약체결 후 몇 일 이내 착수계를 제출해야 하는가?,14일,14일,True,0.0
+DOC011_Q005,DOC011,경상북도 봉화군_봉화군 재난통합관리시스템 고도화 사업.hwp,multiple_choice,intermediate,specific,재난통합관리시스템 고도화 사업의 주요 목적에 해당하는 것으로 가장 적절한 것은 무엇인가?,재난 대응 및 관리 기능 고도화,재난 대응 및 관리 기능 고도화,True,0.0
+DOC012_Q001,DOC012,경희대학교_[입찰공고] 산학협력단 정보시스템 운영 용역업체 선정.hwp,multiple_choice,advanced,specific,최근 3년간 유사 사업실적 10건 이상 또는 SM 사업실적 3건 이상일 경우 배점은 몇 점인가?,5점,5점,True,0.0
+DOC012_Q002,DOC012,경희대학교_[입찰공고] 산학협력단 정보시스템 운영 용역업체 선정.hwp,multiple_choice,basic,common,본 사업의 총 사업예산으로 올바른 것은 무엇인가?,"400,000,000원","400,000,000원",True,0.0
+DOC012_Q003,DOC012,경희대학교_[입찰공고] 산학협력단 정보시스템 운영 용역업체 선정.hwp,multiple_choice,intermediate,common,본 사업의 수행 범위에 포함되는 시스템으로 가장 적절한 것은 무엇인가?,인포21 연구행정시스템,인포21 연구행정시스템,True,0.0
+DOC012_Q004,DOC012,경희대학교_[입찰공고] 산학협력단 정보시스템 운영 용역업체 선정.hwp,short_answer,intermediate,specific,운영플랫폼에서 DBMS에 해당하는 시스템 환경을 작성하시오., Tibero 6.0, Tibero 6.0,True,0.0
+DOC012_Q005,DOC012,경희대학교_[입찰공고] 산학협력단 정보시스템 운영 용역업체 선정.hwp,multiple_choice,intermediate,specific,본 사업의 2차년도 계속진행 수행 여부는 무엇에 따라 결정되는가?,1차년도 수행 평가 결과,1차년도 수행 평가 결과,True,0.0
+DOC013_Q001,DOC013,고려대학교_차세대 포털·학사 정보시스템 구축사업.pdf,multiple_choice,basic,common,본 사업의 사업기간으로 올바른 것은 무엇인가?,계약일로부터 24개월 이내,계약일로부터 24개월 이내,True,0.0
+DOC013_Q002,DOC013,고려대학교_차세대 포털·학사 정보시스템 구축사업.pdf,multiple_choice,basic,common,본 사업의 사업종료일로부터 무상 유지보수 기간으로 올바른 것은 무엇인가?,12개월,12개월,True,0.0
+DOC013_Q003,DOC013,고려대학교_차세대 포털·학사 정보시스템 구축사업.pdf,multiple_choice,basic,common,입찰참가 등록서류 문의 담당 부서로 올바른 것은 무엇인가?,디지털정보처 디지털전략팀,디지털정보처 디지털전략팀,True,0.0
+DOC013_Q004,DOC013,고려대학교_차세대 포털·학사 정보시스템 구축사업.pdf,multiple_choice,basic,common,본 사업의 낙찰 방식으로 올바른 것은 무엇인가?,협상에 의한 계약,협상에 의한 계약,True,0.0
+DOC013_Q005,DOC013,고려대학교_차세대 포털·학사 정보시스템 구축사업.pdf,short_answer,intermediate,specific,제안서 발표자료는 양면인쇄 기준 몇 장 이내로 작성해야 하는가?,50,50,True,0.0
+DOC014_Q001,DOC014,고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영.hwp,short_answer,basic,common,본 사업의 사업명을 작성하시오.,고양도시관리공사 관산근린공원 다목적구장 회원 통합운영관리 시스템 구축,고양도시관리공사 관산근린공원 다목적구장 회원 통합운영관리 시스템 구축,True,0.0
+DOC014_Q002,DOC014,고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영.hwp,multiple_choice,intermediate,specific,제안서 제출 서류 중 맞는 구성은 무엇인가?,제안서 9부 및 USB 2개,제안서 9부 및 USB 2개,True,0.0
+DOC014_Q003,DOC014,고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영.hwp,multiple_choice,intermediate,common,제안서 제출일시로 올바른 것은 무엇인가?,2024-09-11. 10:00 ~ 2024-09-19. 17:00,2024-09-11. 10:00 ~ 2024-09-19. 17:00,True,0.0
+DOC014_Q004,DOC014,고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영.hwp,multiple_choice,advanced,specific,다음 중 본 사업의 사업범위에 포함되는 내용은 무엇인가?,무인화 운영을 위한 프로그램 및 기술 지원,무인화 운영을 위한 프로그램 및 기술 지원,True,0.0
+DOC014_Q005,DOC014,고양도시관리공사_관산근린공원 다목적구장 홈페이지 및 회원 통합운영.hwp,short_answer,intermediate,specific,무인발권기 구매 및 설치 수량은 몇 SET인가?,2SET,2SET,True,0.0
+DOC015_Q001,DOC015,광주과학기술원_실시간통합연구비관리시스템(RCMS) 연계 모듈 변경 사업.hwp,multiple_choice,intermediate,common,본 사업의 선금 지급 비율로 올바른 것은 무엇인가?,계약금액의 50%,계약금액의 50%,True,0.0
+DOC015_Q002,DOC015,광주과학기술원_실시간통합연구비관리시스템(RCMS) 연계 모듈 변경 사업.hwp,multiple_choice,intermediate,specific,본 사업의 주요 목적에 해당하는 것으로 가장 적절한 것은 무엇인가?,uZEUS-RCMS 연계 모듈 변경 및 기능 개선을 통한 업무 편의성 제고,uZEUS-RCMS 연계 모듈 변경 및 기능 개선을 통한 업무 편의성 제고,True,0.0
+DOC015_Q003,DOC015,광주과학기술원_실시간통합연구비관리시스템(RCMS) 연계 모듈 변경 사업.hwp,short_answer,intermediate,common,제안서 평가방식으로 올바른 것은 무엇인가?,서면평가,서면평가,True,0.0
+DOC015_Q004,DOC015,광주과학기술원_실시간통합연구비관리시스템(RCMS) 연계 모듈 변경 사업.hwp,short_answer,advanced,specific,본 사업에서 변경 대상이 되는 시스템 명칭을 작성하시오.,실시간통합연구비관리시스템(RCMS),실시간통합연구비관리시스템(RCMS),True,0.0
+DOC015_Q005,DOC015,광주과학기술원_실시간통합연구비관리시스템(RCMS) 연계 모듈 변경 사업.hwp,multiple_choice,intermediate,specific,다음 중 사용 현황에 포함된 전문기관으로 올바른 것은 무엇인가?,한국산업기술기획평가원,한국산업기술기획평가원,True,0.0
+DOC016_Q001,DOC016,광주과학기술원_학사시스템 기능개선 사업.hwp,short_answer,basic,common,광주과학기술원 학사시스템 기능개선 사업의 사업비는 얼마인가?.,"157,300,000원","157,300,000원",True,0.0
+DOC016_Q002,DOC016,광주과학기술원_학사시스템 기능개선 사업.hwp,short_answer,intermediate,common,사업 담당자의 이메일 주소를 작성하시오.,mspark@gist.ac.kr,mspark@gist.ac.kr,True,0.0
+DOC016_Q003,DOC016,광주과학기술원_학사시스템 기능개선 사업.hwp,multiple_choice,intermediate,common,본 사업의 계약 방법으로 올바른 것은 무엇인가?,공개경쟁입찰,공개경쟁입찰,True,0.0
+DOC016_Q004,DOC016,광주과학기술원_학사시스템 기능개선 사업.hwp,multiple_choice,intermediate,specific,본 사업에서 하도급 가능 여부에 대하여 올바른 것은 무엇인가?,사전 승인 후 가능,사전 승인 후 가능,True,0.0
+DOC016_Q005,DOC016,광주과학기술원_학사시스템 기능개선 사업.hwp,multiple_choice,advanced,specific,주요 사업범위로 가장 적절한 것은 무엇인가?,학사 조직개편에 따른 시스템 개선,학사 조직개편에 따른 시스템 개선,True,0.0
+DOC017_Q001,DOC017,국가과학기술지식정보서비스_통합정보시스템 고도화 용역.hwp,short_answer,basic,common,본 사업의 수행 기관(사업기관)은 어디인가?,한국한의학연구원,한국한의학연구원,True,0.0
+DOC017_Q002,DOC017,국가과학기술지식정보서비스_통합정보시스템 고도화 용역.hwp,multiple_choice,intermediate,specific,단위 / 통합 테스트 단계의 추진 일정은 언제인가?,M5,M5,True,0.0
+DOC017_Q003,DOC017,국가과학기술지식정보서비스_통합정보시스템 고도화 용역.hwp,multiple_choice,intermediate,common,본 사업의 사업기간으로 가장 적절한 것은 무엇인가?,계약 후 5개월 이내,계약 후 5개월 이내,True,0.0
+DOC017_Q004,DOC017,국가과학기술지식정보서비스_통합정보시스템 고도화 용역.hwp,multiple_choice,advanced,specific,본 사업의 요구사항 총 개수는 몇 개인가?,64개,64개,True,0.0
+DOC017_Q005,DOC017,국가과학기술지식정보서비스_통합정보시스템 고도화 용역.hwp,short_answer,intermediate,specific,제안서 제출 장소는 어디인가?,한국한의학연구원 재무회계팀,한국한의학연구원 재무회계팀,True,0.0
+DOC018_Q001,DOC018,국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변).hwp,short_answer,basic,common,본 사업의 소요예산은 얼마인가?,"689,480,000원","689,480,000원",True,0.0
+DOC018_Q002,DOC018,국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변).hwp,multiple_choice,intermediate,specific,다음 중 본 사업의 주요 수행 내용으로 가장 적절한 것은 무엇인가?,openBIM기반 철도인프라 디지털트윈 플랫폼 구축 방안 수립,openBIM기반 철도인프라 디지털트윈 플랫폼 구축 방안 수립,True,0.0
+DOC018_Q003,DOC018,국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변).hwp,multiple_choice,intermediate,common,다음 중 입찰 참가 자격 조건으로 옳은 것은 무엇인가?,입찰 공고일 기준 최근 3년 이내 BIM 관련 사업 실적이 있는 업체,입찰 공고일 기준 최근 3년 이내 BIM 관련 사업 실적이 있는 업체,True,0.0
+DOC018_Q004,DOC018,국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변).hwp,multiple_choice,advanced,specific,제출 산출물 중에 어떤게 있어?,디지털트윈 구축 방안 보고서,디지털트윈 구축 방안 보고서,True,0.0
+DOC018_Q005,DOC018,국가철도공단_철도인프라 디지털트윈 정보화전략계획(ISP) 수립 용역(변).hwp,multiple_choice,basic,common,본 사업의 입찰방법으로 올바른 것은 무엇인가?,제한경쟁입찰,제한경쟁입찰,True,0.0
+DOC019_Q001,DOC019,국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용.hwp,multiple_choice,basic,common,본 사업의 1차 사업기간은 얼마인가?,계약일로부터 4개월,계약일로부터 4개월,True,0.0
+DOC019_Q002,DOC019,국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용.hwp,multiple_choice,basic,common,본 사업의 주관기관은 어디인가?,국립인천해양박물관,국립인천해양박물관,True,0.0
+DOC019_Q003,DOC019,국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용.hwp,multiple_choice,intermediate,specific,다음 중 본 사업의 주요 구축 내용으로 가장 적절한 것은 무엇인가?,웹 기반의 해양자료관리시스템 구축,웹 기반의 해양자료관리시스템 구축,True,0.0
+DOC019_Q004,DOC019,국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용.hwp,short_answer,intermediate,specific,최종검수는 완료계 접수일로부터 며칠 이내에 실시해야 하는가?,14일,14일,True,0.0
+DOC019_Q005,DOC019,국립인천해양박물관_국립인천해양박물관 해양자료관리시스템 구축 용.hwp,multiple_choice,advanced,common,착수 업무보고 일정은 몇 월인가?,12월,12월,True,0.0
+DOC020_Q001,DOC020,국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축.hwp,multiple_choice,basic,common,총 사업예산은 얼마인가?,"1,400,000,000원","1,400,000,000원",True,0.0
+DOC020_Q002,DOC020,국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축.hwp,short_answer,basic,common,담당자의 이메일 주소는?,rheejt@nmc.or.kr,rheejt@nmc.or.kr,True,0.0
+DOC020_Q003,DOC020,국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축.hwp,multiple_choice,advanced,specific,다음 중 본 사업의 추진 일정 단계에 포함되는 것은 무엇인가?,요구사항 정의 및 분석,요구사항 정의 및 분석,True,0.0
+DOC020_Q004,DOC020,국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축.hwp,multiple_choice,intermediate,specific,제안서 요약본은 몇 부 제출해야 하는가?,9부,9부,True,0.0
+DOC020_Q005,DOC020,국립중앙의료원_(긴급)「2024년도 차세대 응급의료 상황관리시스템 구축.hwp,short_answer,intermediate,common,제안서 발표 시간은 최대 몇 분인가?,30분,30분,True,0.0
+DOC021_Q001,DOC021,국민연금공단_2024년 이러닝시스템 운영 용역.hwp,multiple_choice,basic,common,본 사업의 사업기간으로 올바른 것은 무엇인가?,계약체결일로부터 2025년 2월까지,계약체결일로부터 2025년 2월까지,True,0.0
+DOC021_Q002,DOC021,국민연금공단_2024년 이러닝시스템 운영 용역.hwp,short_answer,intermediate,common,본 사업의 총 사업예산은 얼마인가?,"773,801천원","773,801천원",True,0.0
+DOC021_Q003,DOC021,국민연금공단_2024년 이러닝시스템 운영 용역.hwp,multiple_choice,advanced,specific,콘텐츠 개발·관리 항목에서 신규 차시개발 규모는 몇 차시인가?,60차시,60차시,True,0.0
+DOC022_Q001,DOC022,국민연금공단_사업장 사회보험료 지원 고시 개정에 따른 정보시스템 보완 개발.hwp,multiple_choice,intermediate,common,본 사업의 사업담당자 직급으로 올바른 것은 무엇인가?,2. 차장,2. 차장,True,0.0
+DOC022_Q002,DOC022,국민연금공단_사업장 사회보험료 지원 고시 개정에 따른 정보시스템 보완 개발.hwp,short_answer,basic,common,본 사업의 총 사업 예산(부가가치세 포함)을 작성하시오.,"415,977,877원","415,977,877원",True,0.0
+DOC022_Q003,DOC022,국민연금공단_사업장 사회보험료 지원 고시 개정에 따른 정보시스템 보완 개발.hwp,multiple_choice,advanced,specific,다음 중 성능 요구사항(PER-002)에 대한 설명으로 가장 적절한 것은 무엇인가?,사업장 사회보험료 지원 마감 작업은 5시간 이내에 완료해야 한다,사업장 사회보험료 지원 마감 작업은 5시간 이내에 완료해야 한다,True,0.0
+DOC023_Q001,DOC023,국방과학연구소_기록관리시스템 통합 활용 및 보안 환경 구축.hwp,multiple_choice,advanced,specific,본 사업의 주요 목적에 해당하는 것으로 가장 적절한 것은 무엇인가?,기록관리시스템 통합 활용 및 보안 환경 구축,기록관리시스템 통합 활용 및 보안 환경 구축,True,0.0
+DOC023_Q002,DOC023,국방과학연구소_기록관리시스템 통합 활용 및 보안 환경 구축.hwp,multiple_choice,basic,common,제안서 제출 방법은?,온라인 제출 (나라장터),온라인 제출 (나라장터),True,0.0
+DOC023_Q003,DOC023,국방과학연구소_기록관리시스템 통합 활용 및 보안 환경 구축.hwp,multiple_choice,intermediate,common,본 사업의 계약 방식으로 올바른 것은 무엇인가?,제한공개경쟁입찰,제한공개경쟁입찰,True,0.0
+DOC024_Q001,DOC024,국방과학연구소_대용량 자료전송시스템 고도화.hwp,multiple_choice,basic,common,본 사업의 주관기관으로 올바른 것은 무엇인가?,국방과학연구소,국방과학연구소,True,0.0
+DOC024_Q002,DOC024,국방과학연구소_대용량 자료전송시스템 고도화.hwp,short_answer,intermediate,common,본 사업의 수행 기간은 계약일로부터 몇 개월 이내인지 작성하시오.,5개월,5개월,True,0.0
+DOC024_Q003,DOC024,국방과학연구소_대용량 자료전송시스템 고도화.hwp,multiple_choice,advanced,specific,다음 중 본 사업의 성능 요구사항(PER-01)으로 옳은 것은 무엇인가?,1회 반입반출 용량은 최대 50GB까지 실시간 전송 가능해야 한다,1회 반입반출 용량은 최대 50GB까지 실시간 전송 가능해야 한다,True,0.0
+DOC025_Q001,DOC025,그랜드코리아레저(주)_2024년도 GKL 그룹웨어 시스템 구축 용역.hwp,multiple_choice,intermediate,common,본 사업의 제안요청 설명회 일시와 장소로 올바른 것은 무엇인가?,"1. 2024.4.15.(월) 10:30, GKL 본사 B1F 강당","1. 2024.4.15.(월) 10:30, GKL 본사 B1F 강당",True,0.0
+DOC025_Q002,DOC025,그랜드코리아레저(주)_2024년도 GKL 그룹웨어 시스템 구축 용역.hwp,multiple_choice,advanced,specific,다음 중 사업 범위 중 포털에 포함된 기능으로 올바른 것은 무엇인가?,시스템 별 중요정보 표기,시스템 별 중요정보 표기,True,0.0
+DOC025_Q003,DOC025,그랜드코리아레저(주)_2024년도 GKL 그룹웨어 시스템 구축 용역.hwp,multiple_choice,basic,common,본 사업의 평가 방식으로 가장 적절한 것은 무엇인가?,기술평가 90% / 가격평가 10%,기술평가 90% / 가격평가 10%,True,0.0
+DOC026_Q001,DOC026,기초과학연구원_2025년도 중이온가속기용 극저온시스템 운전 용역.pdf,multiple_choice,basic,specific,중이온가속기 또는 극저온시스템 가동기간 동안 운전 업무 수행 조건으로 올바른 것은 무엇인가?,"2. 24시간 운전, 2인 1조 운영","2. 24시간 운전, 2인 1조 운영",True,0.0
+DOC026_Q002,DOC026,기초과학연구원_2025년도 중이온가속기용 극저온시스템 운전 용역.pdf,multiple_choice,intermediate,specific,계약자의 책임으로 인정되는 상황으로 가장 적절한 것은 무엇인가?,3. 인력관리 소홀 또는 조작 실수로 중대한 문제가 발생한 경우,3. 인력관리 소홀 또는 조작 실수로 중대한 문제가 발생한 경우,True,0.0
+DOC026_Q003,DOC026,기초과학연구원_2025년도 중이온가속기용 극저온시스템 운전 용역.pdf,multiple_choice,advanced,specific,극저온시스템 가동기간 중 모니터링 수행 방식으로 가장 적절한 것은 무엇인가?,2. 제어시스템 또는 현장 장치를 활용하여 지속적으로 관찰,2. 제어시스템 또는 현장 장치를 활용하여 지속적으로 관찰,True,0.0
+DOC027_Q001,DOC027,나노종합기술원_스마트 팹 서비스 활용체계 구축관련 설비온라인 시스.hwp,multiple_choice,basic,common,본 사업의 수행 기간은?,18개월,18개월,True,0.0
+DOC027_Q002,DOC027,나노종합기술원_스마트 팹 서비스 활용체계 구축관련 설비온라인 시스.hwp,multiple_choice,intermediate,specific,다음 중 사업 범위에 포함된 내용은?,설비 온라인 시스템 구축,설비 온라인 시스템 구축,True,0.0
+DOC027_Q003,DOC027,나노종합기술원_스마트 팹 서비스 활용체계 구축관련 설비온라인 시스.hwp,multiple_choice,advanced,specific,연계주기(PER-003)에 대한 설명으로 올바른 것은?,기본적으로 실시간 처리,기본적으로 실시간 처리,True,0.0
+DOC028_Q001,DOC028,남서울대학교_[혁신-국고] 남서울대학교 스마트 정보시스템 활성화(학사.hwp,short_answer,basic,common,본 사업의 총 사업 예산(부가가치세 포함)을 작성하시오.,"70,000,000원","70,000,000원",True,0.0
+DOC028_Q002,DOC028,남서울대학교_[혁신-국고] 남서울대학교 스마트 정보시스템 활성화(학사.hwp,multiple_choice,intermediate,common,본 사업의 공동수급 및 하도급에 대한 설명으로 올바른 것은 무엇인가?,공동수급 및 하도급 모두 허용,공동수급 및 하도급 모두 허용,True,0.0
+DOC028_Q003,DOC028,남서울대학교_[혁신-국고] 남서울대학교 스마트 정보시스템 활성화(학사.hwp,multiple_choice,advanced,specific,착수보고에 대한 설명으로 올바른 것은?,계약 후 14일 이내,계약 후 14일 이내,True,0.0
+DOC029_Q001,DOC029,대검찰청_아태 사이버범죄 역량강화 허브(APC-HUB) 홈페이지 및 온라인 교.hwp,multiple_choice,basic,common,본 사업의 발주기관으로 올바른 것은 무엇인가?,대검찰청,대검찰청,True,0.0
+DOC029_Q002,DOC029,대검찰청_아태 사이버범죄 역량강화 허브(APC-HUB) 홈페이지 및 온라인 교.hwp,multiple_choice,intermediate,common,본 사업의 주요 목적에 대한 설명으로 가장 적절한 것은 무엇인가?,3. 기존 시스템 기능 고도화,3. 기존 시스템 기능 고도화,True,0.0
+DOC029_Q003,DOC029,대검찰청_아태 사이버범죄 역량강화 허브(APC-HUB) 홈페이지 및 온라인 교.hwp,multiple_choice,advanced,specific,성능 요구사항에 대한 설명으로 올바른 것은 무엇인가?,정보시스템의 웹페이지는 사용자가 요청한 시간으로부터 3초 이내에 완전히 표시되어야 한다,정보시스템의 웹페이지는 사용자가 요청한 시간으로부터 3초 이내에 완전히 표시되어야 한다,True,0.0
+DOC030_Q001,DOC030,대전대학교_2024학년도 다층적 융합 학습경험 플랫폼(MILE) 구축.hwp,multiple_choice,intermediate,common,본 사업의 사업담당자 전화번호로 올바른 것은 무엇인가?,042-280-4036,042-280-4036,True,0.0
+DOC030_Q002,DOC030,대전대학교_2024학년도 다층적 융합 학습경험 플랫폼(MILE) 구축.hwp,multiple_choice,basic,common,본 사업의 계약 방식으로 올바른 것은 무엇인가?,제한경쟁입찰,제한경쟁입찰,True,0.0
+DOC030_Q003,DOC030,대전대학교_2024학년도 다층적 융합 학습경험 플랫폼(MILE) 구축.hwp,multiple_choice,advanced,specific,제안 평가(PT) 최대 참가인원은?,4명,4명,True,0.0
+DOC031_Q001,DOC031,대한상공회의소_기업 재생에너지 지원센터 홈페이지 개편 및 시스템 고도화.hwp,short_answer,basic,common,본 사업의 용역명을 작성하시오.,기업 재생에너지 지원센터 홈페이지 개편 및 시스템 고도화 사업,기업 재생에너지 지원센터 홈페이지 개편 및 시스템 고도화 사업,True,0.0
+DOC031_Q002,DOC031,대한상공회의소_기업 재생에너지 지원센터 홈페이지 개편 및 시스템 고도화.hwp,multiple_choice,intermediate,common,본 사업의 계약기간으로 올바른 것은 무엇인가?,계약일로부터 6개월,계약일로부터 6개월,True,0.0
+DOC031_Q003,DOC031,대한상공회의소_기업 재생에너지 지원센터 홈페이지 개편 및 시스템 고도화.hwp,multiple_choice,advanced,specific,본 사업의 주요 목적에 대한 설명으로 가장 적절한 것은 무엇인가?,기존 시스템 기능 고도화 및 매칭 시스템 개선,기존 시스템 기능 고도화 및 매칭 시스템 개선,True,0.0
+DOC032_Q001,DOC032,"대한장애인체육회_2025년 전국장애인체육대회 전산 및 시스템, 홈페이지 유지·보수 용역.hwp",multiple_choice,basic,common,본 사업의 사업명으로 올바른 것은 무엇인가?,"2025년 전국장애인체육대회 전산 및 시스템, 홈페이지 유지·보수 용역","2025년 전국장애인체육대회 전산 및 시스템, 홈페이지 유지·보수 용역",True,0.0
+DOC032_Q002,DOC032,"대한장애인체육회_2025년 전국장애인체육대회 전산 및 시스템, 홈페이지 유지·보수 용역.hwp",short_answer,basic,common,본 사업의 총 사업 예산(부가가치세 포함)을 작성하시오.,"220,000,000원","220,000,000원",True,0.0
+DOC032_Q003,DOC032,"대한장애인체육회_2025년 전국장애인체육대회 전산 및 시스템, 홈페이지 유지·보수 용역.hwp",multiple_choice,advanced,specific,웹페이지 성능 요구사항에 대한 설명으로 올바른 것은 무엇인가?,"3초(3,000ms) 이내 결과를 표시해야 한다","3초(3,000ms) 이내 결과를 표시해야 한다",True,0.0
+DOC033_Q001,DOC033,대한적십자사 의료원_적십자병원 병원정보 재해복구시스템 구축 용역.hwp,short_answer,basic,common,본 사업의 사업비로 올바른 것은 무엇인가?,"500,000,000원","500,000,000원",True,0.0
+DOC033_Q002,DOC033,대한적십자사 의료원_적십자병원 병원정보 재해복구시스템 구축 용역.hwp,multiple_choice,intermediate,common,제안서 제출 방법으로 올바른 것은 무엇인가?,방문 제출,방문 제출,True,0.0
+DOC033_Q003,DOC033,대한적십자사 의료원_적십자병원 병원정보 재해복구시스템 구축 용역.hwp,multiple_choice,advanced,specific,재해복구 시스템 장비 구성 요구사항(ECR-01)에 대한 설명으로 가장 적절한 것은 무엇인가?,각종 하드웨어 및 시스템 소프트웨어의 용량 및 수량은 제안요청서의 규격 및 수량 이상을 충족하여야 함,각종 하드웨어 및 시스템 소프트웨어의 용량 및 수량은 제안요청서의 규격 및 수량 이상을 충족하여야 함,True,0.0
+DOC034_Q001,DOC034,문화체육관광부 국립민속박물관_2024년 국립민속박물관 민속아카이브 자료관리시스템 기능개선.hwp,multiple_choice,basic,common,본 사업의 평가 방식으로 올바른 것은 무엇인가?,기술평가 90% / 가격평가 10%,기술평가 90% / 가격평가 10%,True,0.0
+DOC034_Q002,DOC034,문화체육관광부 국립민속박물관_2024년 국립민속박물관 민속아카이브 자료관리시스템 기능개선.hwp,multiple_choice,intermediate,common,제안설명회 개최 시점으로 올바른 것은 무엇인가?,제안서 접수 후 2주 이내,제안서 접수 후 2주 이내,True,0.0
+DOC034_Q003,DOC034,문화체육관광부 국립민속박물관_2024년 국립민속박물관 민속아카이브 자료관리시스템 기능개선.hwp,multiple_choice,advanced,specific,본 사업의 프로젝트 지원 요구사항에 대한 설명으로 가장 적절한 것은 무엇인가?,하자담보책임 기간은 검수완료일로부터 12개월로 함,하자담보책임 기간은 검수완료일로부터 12개월로 함,True,0.0
+DOC035_Q001,DOC035,부산관광공사_경영정보시스템 기능개선.hwp,multiple_choice,basic,common,본 사업의 사업기간으로 올바른 것은 무엇인가?,계약일로부터 90일,계약일로부터 90일,True,0.0
+DOC035_Q002,DOC035,부산관광공사_경영정보시스템 기능개선.hwp,multiple_choice,intermediate,common,다음 중 본 사업의 추진 일정에 포함되는 단계로 올바른 것은 무엇인가?,최적화 반영,최적화 반영,True,0.0
+DOC035_Q003,DOC035,부산관광공사_경영정보시스템 기능개선.hwp,multiple_choice,advanced,specific,기능 요구사항(SFR-001-01)에 대한 설명으로 가장 적절한 것은 무엇인가?,복무관리 기능 최적화로 효율적 관리,복무관리 기능 최적화로 효율적 관리,True,0.0
+DOC036_Q001,DOC036,사단법인 보험개발원_실손보험 청구 전산화 시스템 구축 사업.hwp,short_answer,basic,common,본 사업의 사업명을 작성하시오.,실손보험 청구 전산화 시스템 구축,실손보험 청구 전산화 시스템 구축,True,0.0
+DOC036_Q002,DOC036,사단법인 보험개발원_실손보험 청구 전산화 시스템 구축 사업.hwp,multiple_choice,intermediate,common,본 사업에서 제출해야 하는 제안서 및 요약서의 부수는 몇 부인가?,13부,13부,True,0.0
+DOC036_Q003,DOC036,사단법인 보험개발원_실손보험 청구 전산화 시스템 구축 사업.hwp,multiple_choice,advanced,specific,인터페이스 요구사항(INR)에 대한 설명으로 가장 적절한 것은 무엇인가?,"주요 웹브라우저 호환성 제공(Edge, Firefox, 사파리, 크롬 등 3개 이상의 웹브라우저 지원)","주요 웹브라우저 호환성 제공(Edge, Firefox, 사파리, 크롬 등 3개 이상의 웹브라우저 지원)",True,0.0
+DOC037_Q001,DOC037,사단법인아시아물위원회사무국_우즈벡-키르기즈스탄 기후변화대응 스마트 관개시스템 구축사업.hwp,multiple_choice,basic,common,본 사업의 용역금액으로 올바른 것은 무엇인가?,"3. 5,031,000,000원","3. 5,031,000,000원",True,0.0
+DOC037_Q002,DOC037,사단법인아시아물위원회사무국_우즈벡-키르기즈스탄 기후변화대응 스마트 관개시스템 구축사업.hwp,short_answer,intermediate,common,사업 대상지 국가(2곳)는?,"키르기스스탄, 우즈베키스탄","키르기스스탄, 우즈베키스탄",True,0.0
+DOC037_Q003,DOC037,사단법인아시아물위원회사무국_우즈벡-키르기즈스탄 기후변화대응 스마트 관개시스템 구축사업.hwp,multiple_choice,advanced,specific,착수보고서 제출시기는?,계약 후 1개월 이내,계약 후 1개월 이내,True,0.0
+DOC038_Q001,DOC038,서민금융진흥원_서민금융진흥원 서민금융 채팅 상담시스템 구축.hwp,multiple_choice,basic,common,본 사업의 주요 목적에 대한 설명으로 가장 적절한 것은 무엇인가?,반복 문의는 채팅상담·챗봇으로 우선 유도하고 심층문의는 전화상담으로 연계하는 것,반복 문의는 채팅상담·챗봇으로 우선 유도하고 심층문의는 전화상담으로 연계하는 것,True,0.0
+DOC038_Q002,DOC038,서민금융진흥원_서민금융진흥원 서민금융 채팅 상담시스템 구축.hwp,multiple_choice,intermediate,common,제안서 제출 장소로 올바른 것은 무엇인가?,나라장터(온라인) 접수,나라장터(온라인) 접수,True,0.0
+DOC038_Q003,DOC038,서민금융진흥원_서민금융진흥원 서민금융 채팅 상담시스템 구축.hwp,multiple_choice,advanced,specific,데이터 요구사항(DAR)에 포함된 항목으로 올바른 것은 무엇인가?,1. 데이터 표준 수립 및 상위표준 준수,1. 데이터 표준 수립 및 상위표준 준수,True,0.0
+DOC039_Q001,DOC039,서영대학교 산학협력단_전문대학 혁신지원사업 서영대학교 차세대 교육.hwp,multiple_choice,basic,common,본 사업의 계약방법으로 올바른 것은 무엇인가?,제한경쟁입찰,제한경쟁입찰,True,0.0
+DOC039_Q002,DOC039,서영대학교 산학협력단_전문대학 혁신지원사업 서영대학교 차세대 교육.hwp,short_answer,intermediate,common,본 사업의 수행기간은 계약일로부터 언제까지인가?,2025년 2월,2025년 2월,True,0.0
+DOC039_Q003,DOC039,서영대학교 산학협력단_전문대학 혁신지원사업 서영대학교 차세대 교육.hwp,multiple_choice,advanced,specific,데이터 요구사항(DAR)에 해당하는 항목으로 올바른 것은 무엇인가?,데이터 표준화 및 적용,데이터 표준화 및 적용,True,0.0
+DOC040_Q001,DOC040,서울시립대학교_[사전공개] 학업성취도 다차원 종단분석 통합시스템 1차.pdf,short_answer,basic,common,본 사업의 사업비로 올바른 것은 무엇인가?,"242,900,000원","242,900,000원",True,0.0
+DOC040_Q002,DOC040,서울시립대학교_[사전공개] 학업성취도 다차원 종단분석 통합시스템 1차.pdf,multiple_choice,intermediate,common,본 사업의 담당자 전화번호로 올바른 것은 무엇인가?,02-6490-6176,02-6490-6176,True,0.0
+DOC040_Q003,DOC040,서울시립대학교_[사전공개] 학업성취도 다차원 종단분석 통합시스템 1차.pdf,multiple_choice,advanced,specific,운영 및 안정화 단계가 수행되는 기간으로 올바른 것은 무엇인가?,M+4,M+4,True,0.0
+DOC041_Q001,DOC041,"서울특별시 여성가족재단_(재공고, 협상) 서울 디지털성범죄 안심지원센.hwp",short_answer,basic,common,본 사업의 사업기간 종료일은 언제인가?,2024년 12월 20일,2024년 12월 20일,True,0.0
+DOC041_Q002,DOC041,"서울특별시 여성가족재단_(재공고, 협상) 서울 디지털성범죄 안심지원센.hwp",multiple_choice,intermediate,common,다음 중 사업 추진일정 표에서 '중간보고회' 단계가 수행되는 기간으로 올바른 것은 무엇인가?,9월,9월,True,0.0
+DOC041_Q003,DOC041,"서울특별시 여성가족재단_(재공고, 협상) 서울 디지털성범죄 안심지원센.hwp",multiple_choice,advanced,specific,성능 요구사항(PER)에 해당하는 내용으로 올바른 것은 무엇인가?,홈페이지의 모든 페이지는 3초 이내 오픈,홈페이지의 모든 페이지는 3초 이내 오픈,True,0.0
+DOC042_Q001,DOC042,서울특별시_2024년 지도정보 플랫폼 및 전문활용 연계 시스템 고도화 용.pdf,multiple_choice,basic,common,본 사업의 주관기관으로 올바른 것은 무엇인가?,서울특별시,서울특별시,True,0.0
+DOC042_Q002,DOC042,서울특별시_2024년 지도정보 플랫폼 및 전문활용 연계 시스템 고도화 용.pdf,multiple_choice,intermediate,specific,서울특별시 2024 지도정보 플랫폼 사업 제안요청 내용은?,지도정보 플랫폼(스마트서울맵) 공통기능 서비스 고도화,지도정보 플랫폼(스마트서울맵) 공통기능 서비스 고도화,True,0.0
+DOC042_Q003,DOC042,서울특별시_2024년 지도정보 플랫폼 및 전문활용 연계 시스템 고도화 용.pdf,multiple_choice,advanced,specific,데이터 요구사항(DAR)에 해당하는 내용으로 올바른 것은 무엇인가?,데이터 표준 원칙 및 가이드 수립,데이터 표준 원칙 및 가이드 수립,True,0.0
+DOC043_Q001,DOC043,서울특별시교육청_서울특별시교육청 지능정보화전략계획(ISP) 수립(2차) .hwp,short_answer,basic,common,본 사업의 담당 부처는 어디인가?,디지털·혁신미래교육과,디지털·혁신미래교육과,True,0.0
+DOC043_Q002,DOC043,서울특별시교육청_서울특별시교육청 지능정보화전략계획(ISP) 수립(2차) .hwp,multiple_choice,intermediate,common,제안요청설명회와 관련된 설명으로 올바른 것은 무엇인가?,본 제안요청서로 갈음,본 제안요청서로 갈음,True,0.0
+DOC043_Q003,DOC043,서울특별시교육청_서울특별시교육청 지능정보화전략계획(ISP) 수립(2차) .hwp,multiple_choice,advanced,specific,ISP 사업 추진 산출물은 무엇인가?,현황분석 보고서,현황분석 보고서,True,0.0
+DOC044_Q001,DOC044,세종테크노파크_세종테크노파크 인사정보 전산시스템 구축 용역 입찰공.hwp,multiple_choice,basic,common,본 사업의 주요 구축 범위로 가장 적절한 것은 무엇인가?,인사관리 시스템 구축과 근태관리 고도화,인사관리 시스템 구축과 근태관리 고도화,True,0.0
+DOC044_Q002,DOC044,세종테크노파크_세종테크노파크 인사정보 전산시스템 구축 용역 입찰공.hwp,multiple_choice,intermediate,common,제안서 발표회에서 발표자로 올바른 것은 누구인가?,본 사업에 투입될 PM,본 사업에 투입될 PM,True,0.0
+DOC044_Q003,DOC044,세종테크노파크_세종테크노파크 인사정보 전산시스템 구축 용역 입찰공.hwp,multiple_choice,advanced,specific,보안 요구사항(SER)상 정보 누출금지 대상에 해당하는 것으로 올바른 것은 무엇인가?,2. 기관 소유 정보시스템의 내·외부 IP 주소,2. 기관 소유 정보시스템의 내·외부 IP 주소,True,0.0
+DOC045_Q001,DOC045,수협중앙회_강릉어선안전조업국 상황관제시스템 구축.hwp,short_answer,basic,common,본 사업 관련 질의에 대해 유효한 답변을 제공하는 기관의 담당 부서는 어디인가?,어선안전조업본부 어선ICT지원팀,어선안전조업본부 어선ICT지원팀,True,0.0
+DOC045_Q002,DOC045,수협중앙회_강릉어선안전조업국 상황관제시스템 구축.hwp,multiple_choice,intermediate,common,다음 중 입찰 등록 시 제출해야 하는 서류로 올바른 것은 무엇인가?,사업자등록증,사업자등록증,True,0.0
+DOC045_Q003,DOC045,수협중앙회_강릉어선안전조업국 상황관제시스템 구축.hwp,multiple_choice,advanced,specific,프로젝트 지원 요구사항에 해당하는 내용으로 가장 적절한 것은 무엇인가?,사용자 교육,사용자 교육,True,0.0
+DOC046_Q001,DOC046,수협중앙회_수협중앙회 수산물사이버직매장 시스템 재구축 ISMP 수립 입.hwp,short_answer,basic,common,본 사업에서 허용된 사업기간은 몇 개월인가?,4개월,4개월,True,0.0
+DOC046_Q002,DOC046,수협중앙회_수협중앙회 수산물사이버직매장 시스템 재구축 ISMP 수립 입.hwp,multiple_choice,intermediate,common,최종 산출물 제출 시기로 올바른 것은 무엇인가?,계약일로부터 1주 이내,계약일로부터 1주 이내,True,0.0
+DOC046_Q003,DOC046,수협중앙회_수협중앙회 수산물사이버직매장 시스템 재구축 ISMP 수립 입.hwp,multiple_choice,advanced,specific,제약사항(COR)에 해당하는 내용으로 올바른 것은 무엇인가?,"사업자는 본 용역을 수행함에 있어 발생하는 저작권, 사용권 또는 특허권 등의 문제 대하여 사전에 검토, 조치하여야 하며, 이로 인해 문제가 발생할 경우 사업자가 책임져야 함","사업자는 본 용역을 수행함에 있어 발생하는 저작권, 사용권 또는 특허권 등의 문제 대하여 사전에 검토, 조치하여야 하며, 이로 인해 문제가 발생할 경우 사업자가 책임져야 함",True,0.0
+DOC047_Q001,DOC047,울산광역시_2024년 버스정보시스템 확대 구축 및 기능개선 용역.hwp,short_answer,basic,common,본 사업의 사업명은 무엇인가?,2024년 버스정보시스템 확대 구축 및 기능개선,2024년 버스정보시스템 확대 구축 및 기능개선,True,0.0
+DOC047_Q002,DOC047,울산광역시_2024년 버스정보시스템 확대 구축 및 기능개선 용역.hwp,multiple_choice,intermediate,common,제안서 제출 방법으로 올바른 것은 무엇인가?,방문 접수,방문 접수,True,0.0
+DOC047_Q003,DOC047,울산광역시_2024년 버스정보시스템 확대 구축 및 기능개선 용역.hwp,multiple_choice,advanced,specific,보안 요구사항에 해당하는 내용으로 올바른 것은 무엇인가?,보안 취약점 점검,보안 취약점 점검,True,0.0
+DOC048_Q001,DOC048,을지대학교_을지대학교 비교과시스템 개발.hwp,multiple_choice,basic,common,본 사업의 기술평가와 가격평가 비율로 올바른 것은 무엇인가?,기술 70% / 가격 30%,기술 70% / 가격 30%,True,0.0
+DOC048_Q002,DOC048,을지대학교_을지대학교 비교과시스템 개발.hwp,multiple_choice,intermediate,common,시스템 개발 단계 이후 수행되는 다음 단계로 올바른 것은 무엇인가?,단위/통합 테스트,단위/통합 테스트,True,0.0
+DOC048_Q003,DOC048,을지대학교_을지대학교 비교과시스템 개발.hwp,short_answer,advanced,specific,PSR-프로젝트지원-005에 해당하는 요구사항 명칭은?,기술이전 방안,기술이전 방안,True,0.0
+DOC049_Q001,DOC049,인천공항운영서비스㈜ 차세대 ERP시스템 구축 사업 제안요청서.hwp,short_answer,basic,common,본 사업의 사업예산은 얼마인가?,"996,356,000원","996,356,000원",True,0.0
+DOC049_Q002,DOC049,인천공항운영서비스㈜ 차세대 ERP시스템 구축 사업 제안요청서.hwp,multiple_choice,intermediate,common,본 사업의 시스템 구축 및 개발 기간으로 올바른 것은 무엇인가?,2024년 7월 ~ 2025년 3월,2024년 7월 ~ 2025년 3월,True,0.0
+DOC049_Q003,DOC049,인천공항운영서비스㈜ 차세대 ERP시스템 구축 사업 제안요청서.hwp,multiple_choice,advanced,specific,데이터 요구사항(DAR)에 해당하는 내용으로 가장 적절한 것은 무엇인가?,데이터 이행 검증 및 안정화 지원,데이터 이행 검증 및 안정화 지원,True,0.0
+DOC050_Q001,DOC050,인천광역시 동구_수도국산달동네박물관 전시해설 시스템 구축(협상에 의한 계약).hwp,multiple_choice,basic,common,본 사업의 주요 사업내용에 대한 설명으로 가장 적절한 것은 무엇인가?,무인 전시해설 시스템 구축을 통해 관람객 중심의 전시 관람 환경을 제공하는 사업,무인 전시해설 시스템 구축을 통해 관람객 중심의 전시 관람 환경을 제공하는 사업,True,0.0
+DOC050_Q002,DOC050,인천광역시 동구_수도국산달동네박물관 전시해설 시스템 구축(협상에 의한 계약).hwp,multiple_choice,intermediate,common,제안서 접수 일자로 올바른 것은 무엇인가?,2025년 2월 20일 (목),2025년 2월 20일 (목),True,0.0
+DOC050_Q003,DOC050,인천광역시 동구_수도국산달동네박물관 전시해설 시스템 구축(협상에 의한 계약).hwp,multiple_choice,advanced,specific,요구사항 총괄표 기준 전체 요구사항 개수로 올바른 것은 무엇인가?,56개,56개,True,0.0
+DOC051_Q001,DOC051,인천광역시_도시계획위원회 통합관리시스템 구축용역.hwp,short_answer,basic,common,본 사업의 계약방법은 무엇인가?,제한경쟁입찰(협상에 의한 계약),제한경쟁입찰(협상에 의한 계약),True,0.0
+DOC051_Q002,DOC051,인천광역시_도시계획위원회 통합관리시스템 구축용역.hwp,multiple_choice,intermediate,common,추진일정 상 '시범운영 및 안정화' 단계가 수행되는 시점으로 가장 적절한 것은 무엇인가?,M+5,M+5,True,0.0
+DOC051_Q003,DOC051,인천광역시_도시계획위원회 통합관리시스템 구축용역.hwp,multiple_choice,advanced,specific,다음 중 기능 요구사항(SFR)에 해당하는 것은 무엇인가?,위원회 심의 결과 보고서 관리,위원회 심의 결과 보고서 관리,True,0.0
+DOC052_Q001,DOC052,인천광역시_인천일자리플랫폼 정보시스템 구축 ISP 수립용역.hwp,short_answer,basic,common,본 사업의 사업기간은 얼마인가?,계약일로부터 3개월,계약일로부터 3개월,True,0.0
+DOC052_Q002,DOC052,인천광역시_인천일자리플랫폼 정보시스템 구축 ISP 수립용역.hwp,short_answer,intermediate,common,제안관련 문의사항 전자우편 주소는?,malloy@korea.kr,malloy@korea.kr,True,0.0
+DOC052_Q003,DOC052,인천광역시_인천일자리플랫폼 정보시스템 구축 ISP 수립용역.hwp,multiple_choice,advanced,specific,다음 중 데이터 요구사항에 해당하는 것은 무엇인가?,일자리플랫폼 데이터 구축 방안,일자리플랫폼 데이터 구축 방안,True,0.0
+DOC053_Q001,DOC053,재단법인 광주광역시 광주문화재단_2024년 광주문화예술통합플랫폼 시스템 유지 및 보수 용역.hwp,multiple_choice,basic,common,본 사업의 제안서 평가비율로 올바른 것은 무엇인가?,"기술평가 90%, 가격평가 10%","기술평가 90%, 가격평가 10%",True,0.0
+DOC053_Q002,DOC053,재단법인 광주광역시 광주문화재단_2024년 광주문화예술통합플랫폼 시스템 유지 및 보수 용역.hwp,multiple_choice,intermediate,common,본 사업에서 제안사가 수행해야 하는 '플랫폼('디어마이광주') 활성화 점검 회의'의 운영 기준으로 가장 적절한 것은 무엇인가?,총 9회 개최 (월 평균 1회 이상),총 9회 개최 (월 평균 1회 이상),True,0.0
+DOC053_Q003,DOC053,재단법인 광주광역시 광주문화재단_2024년 광주문화예술통합플랫폼 시스템 유지 및 보수 용역.hwp,multiple_choice,advanced,specific,다음 중 유지관리 수행 요구사항(MAR)에 해당하는 것으로 가장 적절한 것은 무엇인가?,플랫폼 기능 개선,플랫폼 기능 개선,True,0.0
+DOC054_Q001,DOC054,재단법인 광주연구원_광주정책연구아카이브(GPA) 시스템 개발.hwp,short_answer,basic,common,본 사업의 사업기간은 얼마인가?,착수일로부터 5개월,착수일로부터 5개월,True,0.0
+DOC054_Q002,DOC054,재단법인 광주연구원_광주정책연구아카이브(GPA) 시스템 개발.hwp,multiple_choice,intermediate,common,본 사업의 제안서 평가 절차에 포함되는 단계로 올바른 것은 무엇인가?,제안서 제출 → 제안서 발표 → 협상대상자 선정,제안서 제출 → 제안서 발표 → 협상대상자 선정,True,0.0
+DOC054_Q003,DOC054,재단법인 광주연구원_광주정책연구아카이브(GPA) 시스템 개발.hwp,multiple_choice,advanced,specific,다음 중 기능 요구사항(SFR)에 해당하는 것으로 가장 적절한 것은 무엇인가?,공지 및 게시 관리 기능,공지 및 게시 관리 기능,True,0.0
+DOC055_Q001,DOC055,2024년 장애인문화예술정보시스템 이음온라인 운영 용역.hwp,short_answer,basic,common,본 사업의 총 사업예산은 얼마인가?,"380,000,000","380,000,000",True,0.0
+DOC055_Q002,DOC055,2024년 장애인문화예술정보시스템 이음온라인 운영 용역.hwp,multiple_choice,intermediate,common,이음온라인 뉴스레터 발송 주기로 올바른 것은 무엇인가?,월 2회,월 2회,True,0.0
+DOC055_Q003,DOC055,2024년 장애인문화예술정보시스템 이음온라인 운영 용역.hwp,multiple_choice,advanced,specific,다음 중 개발 요구사항(DER)에 해당하는 것은 무엇인가?,큐레이션 콘텐츠 운영,큐레이션 콘텐츠 운영,True,0.0
+DOC056_Q001,DOC056,2025년 통합접수시스템 운영.hwp,short_answer,basic,common,본 사업의 발주기관은 어디인가?,경기도일자리재단,경기도일자리재단,True,0.0
+DOC056_Q002,DOC056,2025년 통합접수시스템 운영.hwp,multiple_choice,intermediate,common,본 사업의 사업기간으로 올바른 것은 무엇인가?,2025.1.1 ~ 2025.12.31,2025.1.1 ~ 2025.12.31,True,0.0
+DOC056_Q003,DOC056,2025년 통합접수시스템 운영.hwp,multiple_choice,advanced,specific,현행 시스템 환경에서 사용 중인 OS는 무엇인가?,Linux,Linux,True,0.0
+DOC057_Q001,DOC057,스포츠윤리센터 LMS 기능개선.hwp,multiple_choice,basic,common,본 사업의 사업기간으로 올바른 것은 무엇인가?,계약 후 150일,계약 후 150일,True,0.0
+DOC057_Q002,DOC057,스포츠윤리센터 LMS 기능개선.hwp,short_answer,intermediate,common,본 사업 제안요청서 표지에 기재된 담당자 이름은 누구인가?,김규동,김규동,True,0.0
+DOC057_Q003,DOC057,스포츠윤리센터 LMS 기능개선.hwp,multiple_choice,advanced,specific,다음 중 인터페이스 요구사항(IR)에 해당하는 것은 무엇인가?,웹 접근성 및 호환성 준수,웹 접근성 및 호환성 준수,True,0.0
+DOC058_Q001,DOC058,GIS 통계 기반 재난안전데이터 분석관리 시스템 구축.hwp,short_answer,basic,common,본 사업의 과업기간 종료일은 언제인가?,2025년 11월 14일,2025년 11월 14일,True,0.0
+DOC058_Q002,DOC058,GIS 통계 기반 재난안전데이터 분석관리 시스템 구축.hwp,multiple_choice,intermediate,common,본 사업의 제안서 제출 관련 항목이 포함된 장(章)은 무엇인가?,4장 가격 및 제안서 작성요령,4장 가격 및 제안서 작성요령,True,0.0
+DOC058_Q003,DOC058,GIS 통계 기반 재난안전데이터 분석관리 시스템 구축.hwp,multiple_choice,advanced,specific,요구사항 총괄표 기준 성능 요구사항(PER)의 개수는 몇 개인가?,2개,2개,True,0.0
+DOC059_Q001,DOC059,JST 공유대학 xAPI 기반 LRS시스템 구축.hwp,short_answer,basic,common,본 사업의 주관기관은?,전북지역혁신플랫폼 대학교육혁신본부,전북지역혁신플랫폼 대학교육혁신본부,True,0.0
+DOC059_Q002,DOC059,JST 공유대학 xAPI 기반 LRS시스템 구축.hwp,multiple_choice,intermediate,common,본 사업에서 데이터 저장을 위한 DB 구조로 사용되는 기술은 무엇인가?,PostgreSQL,PostgreSQL,True,0.0
+DOC059_Q003,DOC059,JST 공유대학 xAPI 기반 LRS시스템 구축.hwp,multiple_choice,advanced,specific,요구사항 총괄표 기준 보안 요구사항(SER)의 개수는 몇 개인가?,16개,16개,True,0.0
+DOC060_Q001,DOC060,정읍체육트레이닝센터 통합운영관리시스템 구축.hwp,short_answer,basic,common,본 사업의 사업예산은 얼마인가?,"200,000,000원","200,000,000원",True,0.0
+DOC060_Q002,DOC060,정읍체육트레이닝센터 통합운영관리시스템 구축.hwp,multiple_choice,intermediate,common,본 사업의 과업기간으로 올바른 것은 무엇인가?,착수일로부터 80일,착수일로부터 80일,True,0.0
+DOC060_Q003,DOC060,정읍체육트레이닝센터 통합운영관리시스템 구축.hwp,multiple_choice,advanced,specific,다음 중 시스템 장비 구성 요구사항(ECR)에 해당하는 것은 무엇인가?,클라우드 서버 구축,클라우드 서버 구축,True,0.0
+DOC061_Q001,DOC061,조선대학교 SW중심대학 사업관리시스템 구축.hwp,short_answer,basic,common,본 사업명은?,2024 조선대학교 SW중심대학 사업관리시스템(WeHub) 구축,2024 조선대학교 SW중심대학 사업관리시스템(WeHub) 구축,True,0.0
+DOC061_Q002,DOC061,조선대학교 SW중심대학 사업관리시스템 구축.hwp,multiple_choice,intermediate,common,사업 추진일정 중 교육 및 서비스준비 단계는 어떤 일정에 속하는가?,M+2,M+2,True,0.0
+DOC061_Q003,DOC061,조선대학교 SW중심대학 사업관리시스템 구축.hwp,multiple_choice,advanced,specific,제안서는 A4용지 기준 최대 몇 페이지까지 작성 가능한가?,100,100,True,0.0
+DOC062_Q001,DOC062,행정정보시스템 위탁운영사업.hwp,short_answer,basic,common,본 사업의 입찰방법은 무엇인가?,제한경쟁입찰,제한경쟁입찰,True,0.0
+DOC062_Q002,DOC062,행정정보시스템 위탁운영사업.hwp,multiple_choice,intermediate,common,사업 추진 일정에 대한 설명으로 올바른 것은 무엇인가?,헬프데스크 운영은 사업 수행 기간 동안 진행된다,헬프데스크 운영은 사업 수행 기간 동안 진행된다,True,0.0
+DOC062_Q003,DOC062,행정정보시스템 위탁운영사업.hwp,multiple_choice,advanced,specific,보안관리 요건에 따른 요구사항으로 올바른 것은 무엇인가?,사업 참여자는 보안서약서를 제출해야 한다,사업 참여자는 보안서약서를 제출해야 한다,True,0.0
+DOC063_Q001,DOC063,꿀 품질평가 전산시스템 기능개선 사업.hwp,short_answer,basic,common,본 사업의 주관기관은?,축산물품질평가원,축산물품질평가원,True,0.0
+DOC063_Q002,DOC063,꿀 품질평가 전산시스템 기능개선 사업.hwp,multiple_choice,intermediate,common,사업내용으로 가장 적절한 것은?,등급판정신청서 접수 기능 고도화,등급판정신청서 접수 기능 고도화,True,0.0
+DOC063_Q003,DOC063,꿀 품질평가 전산시스템 기능개선 사업.hwp,multiple_choice,advanced,specific,요구사항 중 테스트 요구사항에 해당하는 내용은 무엇인가?,단위 테스트 방안,단위 테스트 방안,True,0.0
+DOC064_Q001,DOC064,축산물이력관리시스템 개선.hwp,short_answer,basic,common,본 사업에서 개선 대상 전산시스템은 총 몇 종인가?,4종,4종,True,0.0
+DOC064_Q002,DOC064,축산물이력관리시스템 개선.hwp,multiple_choice,intermediate,common,주요 일정 중 검수 단계에 해당하는 기간으로 올바른 것은 무엇인가?,4분기,4분기,True,0.0
+DOC064_Q003,DOC064,축산물이력관리시스템 개선.hwp,multiple_choice,advanced,specific,요구사항 총괄표 기준 보안요구사항(SER)의 개수는 몇 개인가?,13개,13개,True,0.0
+DOC065_Q001,DOC065,스마트시티 AI 영상감시 시스템 구축.hwp,short_answer,basic,common,본 사업의 담당자 연락처는?,031-400-3794,031-400-3794,True,0.0
+DOC065_Q002,DOC065,스마트시티 AI 영상감시 시스템 구축.hwp,multiple_choice,intermediate,common,사업 추진 일정 중 테스트 단계에서 수행되는 작업으로 올바른 것은 무엇인가?,통합테스트 및 사용자테스트,통합테스트 및 사용자테스트,True,0.0
+DOC065_Q003,DOC065,스마트시티 AI 영상감시 시스템 구축.hwp,multiple_choice,advanced,specific,요구사항 분류 중 공통 요구사항(ADR)에 해당하는 설명으로 올바른 것은 무엇인가?,데이터 수집 및 구조 설계,데이터 수집 및 구조 설계,True,0.0
+DOC066_Q001,DOC066,종량제봉투 판매관리 전산시스템 개선사업.hwp,short_answer,basic,common,본 사업의 사업명은 무엇인가?,종량제봉투 판매관리 전산시스템 개선 사업,종량제봉투 판매관리 전산시스템 개선 사업,True,0.0
+DOC066_Q002,DOC066,종량제봉투 판매관리 전산시스템 개선사업.hwp,multiple_choice,intermediate,common,추진 일정에서 테스트 단계 이후 수행되는 단계는 무엇인가?,교육,교육,True,0.0
+DOC066_Q003,DOC066,종량제봉투 판매관리 전산시스템 개선사업.hwp,multiple_choice,advanced,specific,데이터 요구사항(DAR)에 해당하는 항목으로 올바른 것은 무엇인가?,DB 설계,DB 설계,True,0.0
+DOC067_Q001,DOC067,차세대 통합정보시스템(ERP) 구축.hwp,multiple_choice,basic,common,본 사업에서 ERP 전환 대상 시스템으로 올바른 것은 무엇인가?,SAP ECC 6.0 → S/4 HANA,SAP ECC 6.0 → S/4 HANA,True,0.0
+DOC067_Q002,DOC067,차세대 통합정보시스템(ERP) 구축.hwp,multiple_choice,intermediate,common,추진 일정에서 ‘ERP 업그레이드’ 단계에 포함되는 작업으로 올바른 것은 무엇인가?,HW 도입 및 분석/설계,HW 도입 및 분석/설계,True,0.0
+DOC067_Q003,DOC067,차세대 통합정보시스템(ERP) 구축.hwp,multiple_choice,advanced,specific,요구사항 총괄표 기준 프로젝트 관리 요구사항(PMR)의 개수는 몇 개인가?,10개,10개,True,0.0
+DOC068_Q001,DOC068,아이돌봄인력 인적성 검사 정보시스템 운영.hwp,short_answer,basic,common,본 사업의 총 예산은 얼마인가?,"172,700,000원","172,700,000원",True,0.0
+DOC068_Q002,DOC068,아이돌봄인력 인적성 검사 정보시스템 운영.hwp,multiple_choice,intermediate,common,사업 추진 일정에서 수행되는 보고회 유형으로 올바른 것은 무엇인가?,"착수보고, 중간보고, 최종보고","착수보고, 중간보고, 최종보고",True,0.0
+DOC068_Q003,DOC068,아이돌봄인력 인적성 검사 정보시스템 운영.hwp,multiple_choice,advanced,specific,제안사당 발표시간은 최대 몇 분인가?,15분,15분,True,0.0
+DOC069_Q001,DOC069,NCIC 시스템 운영 및 개선.hwp,multiple_choice,basic,common,본 사업의 사업 범위로 올바른 것은 무엇인가?,기존 국가교육과정정보센터(NCIC) 웹사이트 고도화 및 유지보수,기존 국가교육과정정보센터(NCIC) 웹사이트 고도화 및 유지보수,True,0.0
+DOC069_Q002,DOC069,NCIC 시스템 운영 및 개선.hwp,multiple_choice,intermediate,common,사업 추진 일정에서 계약체결 이후 수행되는 단계로 올바른 것은 무엇인가?,용역진행,용역진행,True,0.0
+DOC069_Q003,DOC069,NCIC 시스템 운영 및 개선.hwp,multiple_choice,advanced,specific,다음 중 기능 요구사항(SFR)에 해당하는 것은?,설문조사 시스템 관리,설문조사 시스템 관리,True,0.0
+DOC070_Q001,DOC070,한국농수산식품유통공사_농산물가격안정기금 정부예산회계연계시스템 .hwp,short_answer,basic,common,본 사업의 사업기간은 얼마인가?,계약일로부터 7개월,계약일로부터 7개월,True,0.0
+DOC070_Q002,DOC070,한국농수산식품유통공사_농산물가격안정기금 정부예산회계연계시스템 .hwp,multiple_choice,intermediate,common,추진일정상 보고회와 관련하여 올바른 것은 무엇인가?,착수·중간·완료보고회를 개최한다,착수·중간·완료보고회를 개최한다,True,0.0
+DOC070_Q003,DOC070,한국농수산식품유통공사_농산물가격안정기금 정부예산회계연계시스템 .hwp,multiple_choice,advanced,specific,다음 중 기능 요구사항(SFR)에 해당하는 것은 무엇인가?,계정과목 분류체계 개편,계정과목 분류체계 개편,True,0.0
+DOC071_Q001,DOC071,한국농어촌공사_네팔 수자원관리 정보화사업-Pilot 시스템 구축용역.hwp,short_answer,basic,common,본 사업의 사업예산은 얼마인가?,"181,913,000원","181,913,000원",True,0.0
+DOC071_Q002,DOC071,한국농어촌공사_네팔 수자원관리 정보화사업-Pilot 시스템 구축용역.hwp,multiple_choice,intermediate,common,추진 전략의 사업추진 절차에서 ‘용역수행’ 단계의 내용으로 올바른 것은 무엇인가?,프로그램 3종과 하드웨어 4종 6식을 구축한다,프로그램 3종과 하드웨어 4종 6식을 구축한다,True,0.0
+DOC071_Q003,DOC071,한국농어촌공사_네팔 수자원관리 정보화사업-Pilot 시스템 구축용역.hwp,multiple_choice,advanced,specific,Pilot 시스템 프로그램 환경구성에서 DB서버의 서비스로 명시된 것은 무엇인가?,Postgre,Postgre,True,0.0
+DOC072_Q001,DOC072,한국농어촌공사_아세안+3 식량안보정보시스템(AFSIS) 3단계 협력(캄보디아.hwp,short_answer,basic,common,본 용역의 대상지는 어디인가?,캄보디아 캄퐁 스퓨 주(Kampong Speu Province),캄보디아 캄퐁 스퓨 주(Kampong Speu Province),True,0.0
+DOC072_Q002,DOC072,한국농어촌공사_아세안+3 식량안보정보시스템(AFSIS) 3단계 협력(캄보디아.hwp,multiple_choice,intermediate,common,산출물 제출 시기 기준으로 FSFM 마스터플랜 수립 계획서는 언제 제출해야 하는가?,계약 후 1개월 이내,계약 후 1개월 이내,True,0.0
+DOC072_Q003,DOC072,한국농어촌공사_아세안+3 식량안보정보시스템(AFSIS) 3단계 협력(캄보디아.hwp,multiple_choice,advanced,specific,제약사항(COR) 중 시스템 구축/수정 기간에 대한 요구로 옳은 것은 무엇인가?,사업완료일 최소 1개월 전에 시스템 구축을 완료해야 한다,사업완료일 최소 1개월 전에 시스템 구축을 완료해야 한다,True,0.0
+DOC073_Q001,DOC073,한국로봇산업진흥원 사업관리시스템 온라인평가 체계 구축.hwp,short_answer,basic,common,본 사업의 계약체결일로부터 사업기간은?,165일,165일,True,0.0
+DOC073_Q002,DOC073,한국로봇산업진흥원 사업관리시스템 온라인평가 체계 구축.hwp,multiple_choice,intermediate,common,추진일정 중 ‘시스템 분석 및 설계’ 단계에서 수행되는 작업으로 가장 적절한 것은?,데이터베이스 설계,데이터베이스 설계,True,0.0
+DOC073_Q003,DOC073,한국로봇산업진흥원 사업관리시스템 온라인평가 체계 구축.hwp,multiple_choice,advanced,specific,기능 요구사항(SFR) 중 평가위원 선정의 공정성과 투명성을 확보하기 위한 기능으로 가장 적절한 것은?,평가위원 랜덤 추출 및 히스토리 저장 기능,평가위원 랜덤 추출 및 히스토리 저장 기능,True,0.0
+DOC074_Q001,DOC074,2024년 건설기술에 관한 특허·실용신안 활용실적 관리시스템 개편.hwp,short_answer,basic,common,본 사업의 발주기관은?,한국발명진흥회,한국발명진흥회,True,0.0
+DOC074_Q002,DOC074,2024년 건설기술에 관한 특허·실용신안 활용실적 관리시스템 개편.hwp,multiple_choice,intermediate,common,본 사업의 과업 범위에 해당하는 것은?,조달청 나라장터 시스템과의 전산 연계 기술 검토,조달청 나라장터 시스템과의 전산 연계 기술 검토,True,0.0
+DOC074_Q003,DOC074,2024년 건설기술에 관한 특허·실용신안 활용실적 관리시스템 개편.hwp,multiple_choice,advanced,specific,데이터 요구사항 및 기능 구현 측면에서 관리자가 수행할 수 있어야 하는 작업으로 가장 적절한 것은?,수수료 유형별 데이터 검색 및 통계 추출,수수료 유형별 데이터 검색 및 통계 추출,True,0.0
+DOC075_Q001,DOC075,의료기기산업 종합정보시스템 기능개선 사업.hwp,short_answer,basic,common,본 사업의 담당자 성함은 무엇인가?,김지애,김지애,True,0.0
+DOC075_Q002,DOC075,의료기기산업 종합정보시스템 기능개선 사업.hwp,multiple_choice,intermediate,common,추진 일정에서 계약체결은 몇 월에 계획되어 있는가?,9월,9월,True,0.0
+DOC075_Q003,DOC075,의료기기산업 종합정보시스템 기능개선 사업.hwp,multiple_choice,advanced,specific,기능 요구사항(SFR) 중 시스템 설계 시 반드시 고려해야 하는 공통 기준으로 가장 적절한 것은 무엇인가?,웹표준 및 시큐어 코딩 준수,웹표준 및 시큐어 코딩 준수,True,0.0
+DOC076_Q001,DOC076,한국보육진흥원_연차별 자율 품질관리 시스템 기능개선.hwp,short_answer,intermediate,specific,본 사업에서 기 개발된 플랫폼 이름은 무엇인가?,STEP+,STEP+,True,0.0
+DOC076_Q002,DOC076,한국보육진흥원_연차별 자율 품질관리 시스템 기능개선.hwp,multiple_choice,basic,common,본 사업의 사업기간은?,계약체결일로부터 4개월,계약체결일로부터 4개월,True,0.0
+DOC076_Q003,DOC076,한국보육진흥원_연차별 자율 품질관리 시스템 기능개선.hwp,multiple_choice,advanced,specific,성능 요구사항 기준으로 홈페이지의 모든 페이지와 오류 메시지는 원칙적으로 몇 초 이내에 응답 또는 제시되어야 하는가?,3초 이내,3초 이내,True,0.0
+DOC077_Q001,DOC077,한국사학진흥재단_대학재정정보시스템(기본재산 및 기채 사후관리) 고도화.hwp,short_answer,basic,specific,이번 고도화 사업에서 학교법인 보통재산 중 신규로 접수·관리 기능을 개발하는 대상 자산 2가지는 무엇인가?,"신탁예금, 유가증권","신탁예금, 유가증권",True,0.0
+DOC077_Q002,DOC077,한국사학진흥재단_대학재정정보시스템(기본재산 및 기채 사후관리) 고도화.hwp,multiple_choice,intermediate,common,추진일정상 구현 및 테스트 단계 이후 수행되는 작업으로 올바른 것은 무엇인가?,기술이전 및 교육,기술이전 및 교육,True,0.0
+DOC077_Q003,DOC077,한국사학진흥재단_대학재정정보시스템(기본재산 및 기채 사후관리) 고도화.hwp,multiple_choice,advanced,specific,기능 요구사항 중 공공데이터 개방을 위해 별도로 개발해야 하는 기능으로 가장 적절한 것은 무엇인가?,오픈API 개발,오픈API 개발,True,0.0
+DOC078_Q001,DOC078,한국사회보장정보원_라오스 보건의료정보화 협력을 위한 사전타당성 조사.hwp,short_answer,basic,common,본 사업의 담당자인 건강보건전략팀 신경주 선임의 유선번호는 무엇인가?,02-6360-6990,02-6360-6990,True,0.0
+DOC078_Q002,DOC078,한국사회보장정보원_라오스 보건의료정보화 협력을 위한 사전타당성 조사.hwp,multiple_choice,intermediate,common,현지조사 결과 라오스 보건의료정보화 협력에서 선행 필요성이 가장 직접적으로 언급된 것은 무엇인가?,기본적인 환자관리 코드 표준화,기본적인 환자관리 코드 표준화,True,0.0
+DOC078_Q003,DOC078,한국사회보장정보원_라오스 보건의료정보화 협력을 위한 사전타당성 조사.hwp,multiple_choice,advanced,specific,필수 인력구성 기준상 사업 총괄 책임자에게 요구되는 역량으로 가장 적절한 것은 무엇인가?,수준급 영어 의사소통 가능한 자,수준급 영어 의사소통 가능한 자,True,0.0
+DOC079_Q001,DOC079,한국산업인력공단_RFID기반 국가자격 시험 결과물 스마트 관리시스템 도입.hwp,short_answer,basic,common,본 사업의 사업명은 무엇인가?,RFID 기반 국가자격 시험 결과물 스마트 관리시스템 도입,RFID 기반 국가자격 시험 결과물 스마트 관리시스템 도입,True,0.0
+DOC079_Q002,DOC079,한국산업인력공단_RFID기반 국가자격 시험 결과물 스마트 관리시스템 도입.hwp,multiple_choice,intermediate,specific,다음 중 제안서 목차에서 가장 먼저 나오는 항목은 무엇인가?,일반현황,일반현황,True,0.0
+DOC079_Q003,DOC079,한국산업인력공단_RFID기반 국가자격 시험 결과물 스마트 관리시스템 도입.hwp,multiple_choice,advanced,specific,다음 중 '서버 네트워크 장애 상황에서도 데이터 손실 방지' 요구사항을 충족하는 설계로 가장 적절한 것은 무엇인가?,리더기에서 데이터 자체 저장 후 재전송 기능 구현,리더기에서 데이터 자체 저장 후 재전송 기능 구현,True,0.0
+DOC080_Q001,DOC080,한국생산기술연구원_2세대 전자조달시스템 기반구축사업.hwp,multiple_choice,basic,common,본 사업에서 안정화기간은 얼마인가?,2개월,2개월,True,0.0
+DOC080_Q002,DOC080,한국생산기술연구원_2세대 전자조달시스템 기반구축사업.hwp,short_answer,intermediate,specific,다음 중 최종산출물은 언제까지 제출해야 하는가?,계약종료 2주 전 까지,계약종료 2주 전 까지,True,0.0
+DOC080_Q003,DOC080,한국생산기술연구원_2세대 전자조달시스템 기반구축사업.hwp,multiple_choice,advanced,specific,"성능 요구사항 기준으로, 시스템 설계 시 반드시 고려해야 하는 핵심 제약으로 가장 적절한 것은 무엇인가?",동시 사용자 500명 이상에서도 성능 저하 없음,동시 사용자 500명 이상에서도 성능 저하 없음,True,0.0
+DOC081_Q001,DOC081,한국산업단지공단_산단 안전정보시스템 1차 구축 용역.hwp,short_answer,basic,common,해당 사업의 사업예산은 얼마인가?,"717,285,200원","717,285,200원",True,0.0
+DOC081_Q002,DOC081,한국산업단지공단_산단 안전정보시스템 1차 구축 용역.hwp,multiple_choice,intermediate,specific,다음 중 사업대상으로 가장 적절한 것은 무엇인가?,한국산업단지공단 관할 82개 산업단지,한국산업단지공단 관할 82개 산업단지,True,0.0
+DOC081_Q003,DOC081,한국산업단지공단_산단 안전정보시스템 1차 구축 용역.hwp,multiple_choice,advanced,specific,제출서류 기타(1)에 해당하는 것은 무엇인가?,청렴계약 이행각서,청렴계약 이행각서,True,0.0
+DOC082_Q001,DOC082,한국생산기술연구원_EIP3.0 고압가스 안전관리 시스템 구축 용역.hwp,short_answer,basic,common,본 사업의 입찰 및 계약 담당자의 FAX 번호는?,041-589-8540,041-589-8540,True,0.0
+DOC082_Q002,DOC082,한국생산기술연구원_EIP3.0 고압가스 안전관리 시스템 구축 용역.hwp,multiple_choice,intermediate,specific,다음 중 추진일정 중 사용자 교육에 해당하는 기간은?,M+5,M+5,True,0.0
+DOC082_Q003,DOC082,한국생산기술연구원_EIP3.0 고압가스 안전관리 시스템 구축 용역.hwp,multiple_choice,advanced,specific,완료보고서는 계약마감일 얼마 전에 초안을 제출해야 하는가?,3주일 전,3주일 전,True,0.0
+DOC083_Q001,DOC083,한국수자원공사_건설통합시스템(CMS) 고도화.hwp,short_answer,basic,common,본 사업의 과업명은 무엇인가?,건설통합시스템(CMS) 고도화,건설통합시스템(CMS) 고도화,True,0.0
+DOC083_Q002,DOC083,한국수자원공사_건설통합시스템(CMS) 고도화.hwp,short_answer,intermediate,specific,과업수행 기간은 어떻게 되는가?,착수일로부터 365일,착수일로부터 365일,True,0.0
+DOC083_Q003,DOC083,한국수자원공사_건설통합시스템(CMS) 고도화.hwp,multiple_choice,advanced,specific,다음 중 위원회 기능 개선 사항으로 포함되는 것은 무엇인가?,위원별 활동 실적 및 평가 점수 분석 기능,위원별 활동 실적 및 평가 점수 분석 기능,True,0.0
+DOC084_Q001,DOC084,한국수자원공사_수도사업장 통합 사고분석솔루션 시범구축 용역.hwp,short_answer,basic,common,본 사업의 예산은?,"195,030,000","195,030,000",True,0.0
+DOC084_Q002,DOC084,한국수자원공사_수도사업장 통합 사고분석솔루션 시범구축 용역.hwp,multiple_choice,intermediate,specific,본 사업에서 하자보수보증금율을 얼마인가?,계약금액의 2%,계약금액의 2%,True,0.0
+DOC084_Q003,DOC084,한국수자원공사_수도사업장 통합 사고분석솔루션 시범구축 용역.hwp,multiple_choice,advanced,specific,다음 중 하도급 관련 조건으로 옳은 것은 무엇인가?,하도급은 사전 승인 필요,하도급은 사전 승인 필요,True,0.0
+DOC085_Q001,DOC085,한국수자원공사_용인 첨단 시스템반도체 국가산단 용수공급사업 타당성.hwp,short_answer,intermediate,specific,본 사업의 과업위치인 지자체 4곳은 어디인가?,"용인시, 성남시, 광주시, 하남시","용인시, 성남시, 광주시, 하남시",True,0.0
+DOC085_Q002,DOC085,한국수자원공사_용인 첨단 시스템반도체 국가산단 용수공급사업 타당성.hwp,short_answer,basic,specific,본 사업의 과업명은 무엇인가?,용인 첨단 시스템반도체 국가산단 용수공급사업 타당성조사 및 기본계획 수립 용역,용인 첨단 시스템반도체 국가산단 용수공급사업 타당성조사 및 기본계획 수립 용역,True,0.0
+DOC085_Q003,DOC085,한국수자원공사_용인 첨단 시스템반도체 국가산단 용수공급사업 타당성.hwp,multiple_choice,advanced,specific,본 사업의 과업기간은 얼마인가?,착수일로부터 14개월,착수일로부터 14개월,True,0.0
+DOC086_Q001,DOC086,한국수자원조사기술원_HDIMS 재구축.hwp,short_answer,basic,common,본 사업의 사업예산은?,"493,270,440원","493,270,440원",True,0.0
+DOC086_Q002,DOC086,한국수자원조사기술원_HDIMS 재구축.hwp,short_answer,intermediate,specific,추진 일정에서 중간보고는 총 몇 회인가?,2회,2회,True,0.0
+DOC086_Q003,DOC086,한국수자원조사기술원_HDIMS 재구축.hwp,multiple_choice,advanced,specific,제안요청 관련 사업내용 담당자의 연락처는 무엇인가?,031-929-0959,031-929-0959,True,0.0
+DOC087_Q001,DOC087,한국수출입은행_모잠비크 ITS 타당성조사.hwp,short_answer,basic,common,본 용역의 총 과업기간은 얼마인가?,7개월,7개월,True,0.0
+DOC087_Q002,DOC087,한국수출입은행_모잠비크 ITS 타당성조사.hwp,multiple_choice,intermediate,specific,본 사업의 입찰 및 낙찰자 결졍방식으로 올바른 것은 무엇인가?,제한경쟁입찰 + 협상에 의한 계약,제한경쟁입찰 + 협상에 의한 계약,True,0.0
+DOC087_Q003,DOC087,한국수출입은행_모잠비크 ITS 타당성조사.hwp,short_answer,advanced,specific,제안서 접수장소는 어디인가?,한국수출입은행 본점 1층 로비,한국수출입은행 본점 1층 로비,True,0.0
+DOC088_Q001,DOC088,한국어촌어항공단 ERP·GW 기능 고도화.hwp,short_answer,basic,common,본 사업의 예산은 얼마인가?,"397,000,000원","397,000,000원",True,0.0
+DOC088_Q002,DOC088,한국어촌어항공단 ERP·GW 기능 고도화.hwp,multiple_choice,intermediate,common,추진일정 중 단위테스트에 해당하는 기간은?,M+4,M+4,True,0.0
+DOC088_Q003,DOC088,한국어촌어항공단 ERP·GW 기능 고도화.hwp,short_answer,advanced,specific,발주기관에서 지정한 제안서 발표자는?,사업PM,사업PM,True,0.0
+DOC089_Q001,DOC089,문서089.hwp,short_answer,basic,basic,본 사업의 사업명은 무엇인가?,2024년 기초학문자료센터 시스템 운영 및 연구성과물 DB 구축,2024년 기초학문자료센터 시스템 운영 및 연구성과물 DB 구축,True,0.0
+DOC089_Q002,DOC089,문서089.hwp,multiple_choice,intermediate,제안서,제안서 작성 시 포함해야 할 내용으로 가장 적절한 것은 무엇인가?,추진전략 및 수행계획과 이행방안 포함,추진전략 및 수행계획과 이행방안 포함,True,0.0
+DOC089_Q003,DOC089,문서089.hwp,multiple_choice,intermediate,사업개요,본 사업의 사업기간으로 올바른 것은 무엇인가?,계약일로부터 12개월,계약일로부터 12개월,True,0.0
+DOC090_Q001,DOC090,한국연구재단 대학산학협력활동 실태조사 시스템.hwp,short_answer,basic,common,본 사업의 발주기관은 어디인가?,한국연구재단,한국연구재단,True,0.0
+DOC090_Q002,DOC090,한국연구재단 대학산학협력활동 실태조사 시스템.hwp,multiple_choice,intermediate,common,기본 산출물은 무엇인가?,업무보고서,업무보고서,True,0.0
+DOC090_Q003,DOC090,한국연구재단 대학산학협력활동 실태조사 시스템.hwp,short_answer,advanced,specific,추진일정표 상에 상시 지원이 필요한 항목이 있는가?,"시스템 운영지원, 클라우드 서버 운영","시스템 운영지원, 클라우드 서버 운영",True,0.0
+DOC091_Q001,DOC090,한국원자력연구원 선량평가시스템 고도화.hwp,short_answer,basic,basic,본 사업의 사업기간은 얼마인가?,계약일로부터 6개월,계약일로부터 6개월,True,0.0
+DOC091_Q002,DOC090,한국원자력연구원 선량평가시스템 고도화.hwp,multiple_choice,intermediate,specific,추진 일정에서 통합 테스트 이후 수행되는 단계는 무엇인가?,매뉴얼/산출물 작성,매뉴얼/산출물 작성,True,0.0
+DOC091_Q003,DOC090,한국원자력연구원 선량평가시스템 고도화.hwp,multiple_choice,intermediate,specific,성능 요구사항(PER)에 해당하는 내용으로 올바른 것은 무엇인가?,질의응답 처리 시간을 3초 이내로 제공,질의응답 처리 시간을 3초 이내로 제공,True,0.0
+DOC092_Q001,DOC091,e나라도움 업무시스템 웹 접근성 컨설팅.hwp,short_answer,basic,common,본 사업의 사업예산은 얼마인가?,"70,000,000원","70,000,000원",True,0.0
+DOC092_Q002,DOC091,e나라도움 업무시스템 웹 접근성 컨설팅.hwp,multiple_choice,intermediate,specific,사업 추진 단계 중 2차 단계에 해당하는 내용으로 올바른 것은 무엇인가?,교육 및 품질관리,교육 및 품질관리,True,0.0
+DOC092_Q003,DOC091,e나라도움 업무시스템 웹 접근성 컨설팅.hwp,multiple_choice,advanced,specific,보안 요구사항(SER)에 해당하는 내용으로 올바른 것은 무엇인가?,보안 관련 법령 및 지침 준수,보안 관련 법령 및 지침 준수,True,0.0
+DOC093_Q001,DOC092,전기안전 관제시스템 보안 모듈 개발.hwp,short_answer,basic,basic,본 사업의 사업기간은 얼마인가?,계약 후 180일,계약 후 180일,True,0.0
+DOC093_Q002,DOC092,전기안전 관제시스템 보안 모듈 개발.hwp,multiple_choice,intermediate,specific,추진 일정에서 ‘보안모듈 개발 및 관제 기능 개선’ 이후 수행되는 단계는 무엇인가?,테스트 및 검수,테스트 및 검수,True,0.0
+DOC093_Q003,DOC092,전기안전 관제시스템 보안 모듈 개발.hwp,multiple_choice,intermediate,advanced,기능 요구사항(SFR)에 해당하는 항목으로 올바른 것은 무엇인가?,보안모듈 소프트웨어 기능 구현,보안모듈 소프트웨어 기능 구현,True,0.0
+DOC094_Q001,DOC094,한국지식재산보호원_IP-NAVI 해외지식재산센터 사업관리 시스템 기능개선,short_answer,basic,common,해당 사업의 총 사업예산은 얼마인가?,"60,000,000원","60,000,000원",True,0.0
+DOC094_Q002,DOC094,한국지식재산보호원_IP-NAVI 해외지식재산센터 사업관리 시스템 기능개선,multiple_choice,intermediate,specific,다음 중 제안서 작성 시 요구되는 사항으로 올바른 것은?,제안서는 한글 작성이 원칙이며 약어 설명을 포함해야 한다,제안서는 한글 작성이 원칙이며 약어 설명을 포함해야 한다,True,0.0
+DOC094_Q003,DOC094,한국지식재산보호원_IP-NAVI 해외지식재산센터 사업관리 시스템 기능개선,multiple_choice,advanced,advanced,다음 중 본 사업의 상담창구 구축 기능에 포함되는 것은 무엇인가?,1:1 온라인 상담 게시판 기능 구축,1:1 온라인 상담 게시판 기능 구축,True,0.0
+DOC095_Q001,DOC095,한국철도공사_운행정보기록 자동분석시스템 개량,short_answer,basic,common,해당 사업의 사업기간은 착수일로부터 몇 일인가?,180일,180일,True,0.0
+DOC095_Q002,DOC095,한국철도공사_운행정보기록 자동분석시스템 개량,multiple_choice,intermediate,common,다음 중 제안서 작성 시 요구되는 사항으로 가장 적절한 것은?,제안사는 시스템 개선 방향을 구체적으로 제시해야 한다,제안사는 시스템 개선 방향을 구체적으로 제시해야 한다,True,0.0
+DOC095_Q003,DOC095,한국철도공사_운행정보기록 자동분석시스템 개량,multiple_choice,advanced,specific,다음 중 시스템 개량 항목에 포함되지 않는 것은?,블록체인 기반 데이터 저장 기능 도입,블록체인 기반 데이터 저장 기능 도입,True,0.0
+DOC096_Q001,DOC096,한국철도공사_모바일오피스 시스템 고도화,short_answer,basic,common,해당 사업의 사업기간은 착수일로부터 몇 개월 이내인가?,6개월,6개월,True,0.0
+DOC096_Q002,DOC096,한국철도공사_모바일오피스 시스템 고도화,multiple_choice,intermediate,common,다음 중 제안서 작성 시 요구되는 방향으로 올바른 것은?,사용자 편의성을 고려하여 요구사항을 해석하고 반영해야 한다,사용자 편의성을 고려하여 요구사항을 해석하고 반영해야 한다,True,0.0
+DOC096_Q003,DOC096,한국철도공사_모바일오피스 시스템 고도화,multiple_choice,advanced,사업내용,다음 중 모바일오피스 시스템 고도화의 주요 개선사항으로 적절한 것은?,업무전용앱 기능을 모바일오피스에 통합,업무전용앱 기능을 모바일오피스에 통합,True,0.0
+DOC097_Q001,DOC097,한국철도공사_예약발매시스템 개량 ISMP 용역.hwp,short_answer,basic,common,본 사업의 사업기간은 얼마인가?,체결일로부터 5개월 이내,체결일로부터 5개월 이내,True,0.0
+DOC097_Q002,DOC097,한국철도공사_예약발매시스템 개량 ISMP 용역.hwp,multiple_choice,intermediate,common,제안서 작성 방향에 대한 설명으로 가장 적절한 것은 무엇인가?,"추진전략, 추진계획 및 이행방안을 구체적이고 명확하게 제시해야 한다","추진전략, 추진계획 및 이행방안을 구체적이고 명확하게 제시해야 한다",True,0.0
+DOC097_Q003,DOC097,한국철도공사_예약발매시스템 개량 ISMP 용역.hwp,multiple_choice,intermediate,specific,본 사업의 추진목표에 포함되는 내용으로 가장 적절한 것은 무엇인가?,예약발매시스템 개량을 위한 정보시스템 마스터플랜(ISMP) 수립,예약발매시스템 개량을 위한 정보시스템 마스터플랜(ISMP) 수립,True,0.0
+DOC098_Q001,DOC098,한국한의학연구원_통합정보시스템 고도화 용역.hwp,short_answer,basic,common,본 사업의 추정가격은 얼마인가?,"140,000,000원","140,000,000원",True,0.0
+DOC098_Q002,DOC098,한국한의학연구원_통합정보시스템 고도화 용역.hwp,multiple_choice,intermediate,specific,공공 SW 사업 법제도 점검항목 중 본 사업에 대해 적용되는 내용으로 옳은 것은 무엇인가?,기술능력 대 가격점수 비중은 90:10이다,기술능력 대 가격점수 비중은 90:10이다,True,0.0
+DOC098_Q003,DOC098,한국한의학연구원_통합정보시스템 고도화 용역.hwp,multiple_choice,intermediate,specific,다음 중 본 사업의 신규구축 범위에 해당하는 것은 무엇인가?,기관생명윤리 임상연구 심의 신청 프로세스 구축,기관생명윤리 임상연구 심의 신청 프로세스 구축,True,0.0
+DOC099_Q001,DOC099,한국해양조사협회_2024년 항해용 간행물 품질관리 업무보조 시스템 구축.hwp,short_answer,basic,common,본 사업의 계약 방법은 무엇인가?,제한입찰(협상에 의한 계약),제한입찰(협상에 의한 계약),True,0.0
+DOC099_Q002,DOC099,한국해양조사협회_2024년 항해용 간행물 품질관리 업무보조 시스템 구축.hwp,multiple_choice,intermediate,common,제안서 작성 시 계약 우선순위 적용 기준으로 가장 먼저 고려되는 것은 무엇인가?,제안요청서 및 제안서 협상안,제안요청서 및 제안서 협상안,True,0.0
+DOC099_Q003,DOC099,한국해양조사협회_2024년 항해용 간행물 품질관리 업무보조 시스템 구축.hwp,multiple_choice,advanced,specific,본 사업 수행 시 계약상대자가 수행해야 하는 보고 체계로 올바른 것은 무엇인가?,착수·중간·완료 보고회를 포함하며 정기 및 수시보고를 수행한다,착수·중간·완료 보고회를 포함하며 정기 및 수시보고를 수행한다,True,0.0
+DOC100_Q001,DOC100,한영대학교_특성화 맞춤형 교육환경 구축 트랙운영 학사정보시스템 고도화.hwp,short_answer,basic,common,본 사업의 사업기간은 얼마인가?,계약일로부터 3개월 (안정화기간 1개월 포함),계약일로부터 3개월 (안정화기간 1개월 포함),True,0.0
+DOC100_Q002,DOC100,한영대학교_특성화 맞춤형 교육환경 구축 트랙운영 학사정보시스템 고도화.hwp,multiple_choice,intermediate,specific,제안서 제출 시 요구되는 제출 형태로 올바른 것은 무엇인가?,"제안서 원본 1부와 사본 9부, USB 1매 제출","제안서 원본 1부와 사본 9부, USB 1매 제출",True,0.0
+DOC100_Q003,DOC100,한영대학교_특성화 맞춤형 교육환경 구축 트랙운영 학사정보시스템 고도화.hwp,multiple_choice,advanced,specific,본 사업에서 협상적격자로 선정되기 위한 기술평가 기준으로 올바른 것은 무엇인가?,기술평가 점수가 배점한도의 85% 이상이어야 한다,기술평가 점수가 배점한도의 85% 이상이어야 한다,True,0.0
