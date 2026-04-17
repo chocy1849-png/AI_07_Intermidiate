@@ -19,6 +19,7 @@ import csv
 import json
 import re
 import time
+import warnings
 from pathlib import Path
 from typing import Any
 
@@ -32,8 +33,49 @@ def load_question_bank(path: Path) -> list[dict[str, Any]]:
     items = data.get("items", [])
     if not items:
         raise RuntimeError(f"문항이 비어있습니다: {path}")
+    validate_question_bank(items, path=path)
     print(f"[로드] {len(items)}문항 로드 완료 (v={data.get('version', '?')})")
     return items
+
+
+def validate_question_bank(items: list[dict[str, Any]], path: Path) -> None:
+    """문제은행 구조 경고 출력.
+    치명적 오류로 중단하지는 않지만, 채점 결과 왜곡 가능성이 큰 항목을 알려준다."""
+    warnings_found: list[str] = []
+
+    for item in items:
+        qid = str(item.get("id", "<unknown>"))
+        qtype = item.get("question_type")
+
+        if qtype == "multiple_choice":
+            choices = item.get("choices")
+            if not isinstance(choices, list) or not choices:
+                warnings_found.append(
+                    f"{qid}: multiple_choice인데 choices 필드가 없거나 비어 있습니다. "
+                    "현재 채점에서는 번호 매핑이 불가능합니다."
+                )
+            else:
+                choice_texts = [_choice_text(str(choice)) for choice in choices]
+                if str(item.get("answer", "")).strip() not in choice_texts and str(item.get("answer", "")).strip() not in [str(c).strip() for c in choices]:
+                    warnings_found.append(
+                        f"{qid}: answer가 choices 텍스트와 정확히 일치하지 않습니다. "
+                        "객관식 정합성 확인이 필요합니다."
+                    )
+
+        document_id = str(item.get("document_id", "")).strip()
+        if qid and document_id and not qid.startswith(f"{document_id}_"):
+            warnings_found.append(
+                f"{qid}: id와 document_id({document_id})가 불일치합니다."
+            )
+
+    if warnings_found:
+        print(f"[경고] 문제은행 구조 이슈 {len(warnings_found)}건 발견: {path}")
+        for message in warnings_found[:20]:
+            print(f"  - {message}")
+        if len(warnings_found) > 20:
+            print(f"  ... 외 {len(warnings_found) - 20}건")
+        for message in warnings_found:
+            warnings.warn(message, stacklevel=2)
 
 
 # ============================================================
@@ -124,6 +166,13 @@ def normalize_number(text: str) -> int | None:
         만_value = _parse_korean_sub(만_match.group(1))
         total += 만_value * 10_000
 
+    # "N,N천원" 또는 "N천원" 패턴 (억/만 없이 천 단위만 있는 경우)
+    if total == 0:
+        천_match = re.search(r"([\d,]+)천", cleaned)
+        if 천_match:
+            천_val = int(천_match.group(1).replace(",", ""))
+            total = 천_val * 1_000
+
     return total if total > 0 else None
 
 
@@ -184,32 +233,50 @@ def map_choice_number(model_answer: str, choices: list[str]) -> str:
         if idx < len(choices):
             return _choice_text(choices[idx])
 
+    # 선택지 텍스트와 정확히 일치하면 우선 반환 ("M+5" ⊂ "M" 오매핑 방지)
+    for choice in choices:
+        ct = _choice_text(choice)
+        if strip_spaces(ct) == strip_spaces(cleaned):
+            return ct
+
     # "2. 제한경쟁입찰" → "제한경쟁입찰" (번호. 텍스트 형식 제거)
-    stripped = re.sub(r"^\d+\.\s*", "", cleaned).strip()
+    # 날짜("2025.1.1")가 잘리지 않도록 1~2자리 숫자 + 뒤에 공백 필수
+    stripped = re.sub(r"^\d{1,2}\.\s+", "", cleaned).strip()
     if stripped != cleaned:
         return stripped
 
     # 문장형: "답은 제한경쟁입찰입니다." → 보기 텍스트가 포함되어있는지 확인
     # 단, "X이 아닌 Y" 패턴에서 X를 정답으로 오인하지 않도록 부정어 체크
     _NEGATIONS = ("아닌", "아니라", "아니고", "않고", "말고", "제외", "아닙니다")
-    matched_choices = []
+
+    def _norm_sep(s: str) -> str:
+        """구분자(, / ·) 를 통일하여 비교 (예: '90%,10%' ↔ '90%/10%')"""
+        return re.sub(r"[,/·%]", lambda m: {",%": ",", "/": ",", "·": ","}.get(m.group(0), m.group(0)), s)
+
+    ps = strip_spaces(cleaned)
+    ps_norm = _norm_sep(ps)
+    matched_choices = []  # (text_position, choice_text)
     for choice in choices:
         ct = _choice_text(choice)
         if not ct:
             continue
         cs = strip_spaces(ct)
-        ps = strip_spaces(cleaned)
-        if cs in ps:
-            idx = ps.index(cs)
-            after_text = ps[idx + len(cs):idx + len(cs) + 10]
+        cs_norm = _norm_sep(cs)
+        # 원본 비교 또는 구분자 정규화 후 비교
+        match_str = ps if cs in ps else (ps_norm if cs_norm in ps_norm else None)
+        if match_str is not None:
+            search_cs = cs if cs in ps else cs_norm
+            idx = match_str.index(search_cs)
+            after_text = match_str[idx + len(search_cs):idx + len(search_cs) + 10]
             has_negation = any(neg in after_text for neg in _NEGATIONS)
             if not has_negation:
-                matched_choices.append(ct)
+                matched_choices.append((idx, ct))
     if len(matched_choices) == 1:
-        return matched_choices[0]
+        return matched_choices[0][1]
     elif len(matched_choices) > 1:
-        # 여러 보기가 포함된 경우 마지막 것 (보통 최종 답변)
-        return matched_choices[-1]
+        # 여러 보기가 포함된 경우 텍스트에서 가장 먼저 등장한 것 반환 (모델은 정답을 먼저 언급)
+        matched_choices.sort(key=lambda x: x[0])
+        return matched_choices[0][1]
 
     return cleaned
 
@@ -227,19 +294,21 @@ def grade(model_answer: str, item: dict[str, Any]) -> bool:
     # 1) 객관식 번호 폴백
     if qtype == "multiple_choice" and "choices" in item:
         model_answer = map_choice_number(model_answer, item["choices"])
+        # truth에도 "N. 텍스트" 형식이면 번호 제거 (문제은행 작성 방식 차이 대응)
+        truth = _choice_text(truth)
 
     # 2) 공백 제거 후 Exact Match
     if strip_spaces(model_answer) == strip_spaces(truth):
         return True
 
     # 3) 정답이 모델 답변에 포함되어 있는지 (문장형 답변 대응)
-    #    - 정답이 3글자 이상일 때만 (짧으면 오탐 위험)
+    #    - 정답이 4글자 이상일 때만 (짧으면 오탐 위험)
     #    - 앞뒤 글자가 숫자면 부분 매칭이므로 제외 ("10개" in "100개" 방지)
     #    - 정답 뒤에 부정어가 오면 제외 ("제한경쟁입찰이 아닌" 방지)
     _NEGATIONS = ("아닌", "아니라", "아니고", "않고", "말고", "제외", "아닙니다")
     truth_clean = strip_spaces(truth)
     pred_clean = strip_spaces(model_answer)
-    if len(truth_clean) >= 3 and truth_clean in pred_clean:
+    if len(truth_clean) >= 4 and truth_clean in pred_clean:
         idx = pred_clean.index(truth_clean)
         before = pred_clean[idx - 1] if idx > 0 else ""
         after_idx = idx + len(truth_clean)
@@ -262,6 +331,15 @@ def grade(model_answer: str, item: dict[str, Any]) -> bool:
     if pred_date is not None and truth_date is not None:
         return pred_date == truth_date
 
+    # 6) 쉼표 구분 숫자 목록 비교 (예: GT="20, 70" → 답변에 20과 70이 모두 포함)
+    truth_nums = re.findall(r"\d+", truth_clean)
+    if len(truth_nums) >= 2:
+        pred_nums = re.findall(r"\d+", pred_clean)
+        truth_counts = {n: truth_nums.count(n) for n in set(truth_nums)}
+        pred_counts = {n: pred_nums.count(n) for n in set(pred_nums)}
+        if all(pred_counts.get(n, 0) >= count for n, count in truth_counts.items()):
+            return True
+
     return False
 
 
@@ -274,10 +352,62 @@ def ask_dummy(question: str, **kwargs) -> str:
     return f"[더미 응답] {question}"
 
 
-def ask_rag(question: str, document_name: str = "", **kwargs) -> str:
+_FILE_NAME_CACHE: dict[str, str] = {}
+
+
+def _normalize_fname(name: str) -> str:
+    """파일명 정규화: 연속 공백 → 단일 공백, 확장자 앞 공백 제거, strip."""
+    import re as _re
+    name = _re.sub(r"\s+", " ", name).strip()
+    name = _re.sub(r"\s+\.(hwp|pdf|xlsx?)$", r".\1", name, flags=_re.I)
+    return name
+
+
+def _nospace(name: str) -> str:
+    """공백 완전 제거 (부분 포함 비교용)."""
+    return re.sub(r"\s+", "", name)
+
+
+def _resolve_file_name(document_name: str) -> str:
+    """JSON의 document_name을 실제 저장된 file_name으로 변환.
+    일치하는 file_name이 없으면 빈 문자열 반환 (필터 미사용 신호)."""
+    if not document_name:
+        return ""
+    if document_name in _FILE_NAME_CACHE:
+        return _FILE_NAME_CACHE[document_name]
+
+    from src.db.parsed_store import load_parsed_documents
+    stored_names = [d["metadata"].get("file_name", "") for d in load_parsed_documents()]
+
+    # 1) 완전 일치
+    if document_name in stored_names:
+        _FILE_NAME_CACHE[document_name] = document_name
+        return document_name
+
+    # 2) 정규화 후 일치 (확장자 앞 공백 등)
+    doc_norm = _normalize_fname(document_name)
+    for sn in stored_names:
+        if _normalize_fname(sn) == doc_norm:
+            _FILE_NAME_CACHE[document_name] = sn
+            return sn
+
+    # 3) 공백 제거 후 부분 포함 (축약 파일명 대응)
+    doc_ns = _nospace(document_name)
+    for sn in stored_names:
+        sn_ns = _nospace(sn)
+        if doc_ns in sn_ns or sn_ns in doc_ns:
+            _FILE_NAME_CACHE[document_name] = sn
+            return sn
+
+    # 4) 못 찾으면 빈 문자열 → 필터 없이 실행
+    _FILE_NAME_CACHE[document_name] = ""
+    return ""
+
+
+def ask_rag(question: str, document_name: str = "", choices: list | None = None, **kwargs) -> str:
     """하은 파이프라인으로 질문 → 응답 생성.
-    document_name이 있으면 질문 앞에 붙여서 RAG가 정확한 문서를 검색하도록 유도."""
-    import os
+    document_name이 있으면 해당 문서 내에서만 검색(file_name 필터).
+    choices가 있으면 질문에 선택지를 포함하여 객관식 답변을 유도."""
     import sys
     from pathlib import Path as _Path
     _root = _Path(__file__).resolve().parent.parent
@@ -286,12 +416,17 @@ def ask_rag(question: str, document_name: str = "", **kwargs) -> str:
     from dotenv import load_dotenv
     load_dotenv(_root / ".env")
     from rag_pipeline import answer_query
-    # 문서명이 있으면 질문에 붙여서 RAG 검색 정확도 향상
+
+    resolved_name = _resolve_file_name(document_name)
     if document_name:
         query = f"[{document_name}] {question}"
     else:
         query = question
-    result = answer_query(query=query, search_mode="하이브리드", top_k=5)
+    if choices:
+        choices_text = "\n".join(f"  {c}" for c in choices)
+        query = f"{query}\n\n[선택지]\n{choices_text}\n\n반드시 위 선택지 중 하나만 골라 번호와 텍스트를 함께 답하세요."
+    filters = {"file_name": resolved_name} if resolved_name else None
+    result = answer_query(query=query, search_mode="하이브리드", top_k=10, filters=filters, eval_mode=True)
     return result.get("answer", "")
 
 
@@ -317,11 +452,16 @@ def run_evaluation(
     for item in items:
         started = time.time()
 
-        model_answer = ask_fn(
-            question=item["question"],
-            answer=item["answer"],  # 검증 모드용
-            document_name=item.get("document_name", ""),
-        )
+        try:
+            model_answer = ask_fn(
+                question=item["question"],
+                answer=item["answer"],  # 검증 모드용
+                document_name=item.get("document_name", ""),
+                choices=item.get("choices", []),
+            )
+        except Exception as exc:
+            print(f"  [오류] {item['id']}: {exc}")
+            model_answer = f"[오류: {exc}]"
         elapsed = round(time.time() - started, 2)
 
         is_correct = grade(model_answer, item)
