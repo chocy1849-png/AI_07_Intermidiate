@@ -9,7 +9,7 @@
 
 | 항목 | 경로 | 설명 |
 |---|---|---|
-| 최종 보고서 PDF | `docs/report/final_report.pdf` | 제출 전 PDF 파일 추가 필요 |
+| 최종 보고서 PDF | `docs/report/final_report.pdf` | - |
 | 보고서 작성용 통합 번들 | [`docs/final_bundle/`](docs/final_bundle/) | 최종 요약 문서 15개 + manifest/missing items |
 | 프로젝트 개요/타임라인 | [`docs/final_bundle/00_project_overview_and_timeline.md`](docs/final_bundle/00_project_overview_and_timeline.md) | 전체 흐름 요약 |
 | 시스템 아키텍처 | [`docs/final_bundle/01_system_architecture_and_core_code_map.md`](docs/final_bundle/01_system_architecture_and_core_code_map.md) | 코드 구조와 핵심 파일 역할 |
