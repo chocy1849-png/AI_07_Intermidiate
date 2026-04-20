@@ -1,0 +1,3 @@
+﻿id,document_id,document_name,question_type,difficulty,category,question,ground_truth,model_answer,is_correct,elapsed_sec
+DOC001_Q001,DOC001,(사)벤처기업협회_2024년 벤처확인종합관리시스템 기능 고도화 용역사업.hwp,short_answer,basic,common,해당 사업의 총 예산은 얼마인가?,"352,000,000원","352,000,000원",True,0.0
+DOC001_Q002,DOC001,(사)벤처기업협회_2024년 벤처확인종합관리시스템 기능 고도화 용역사업.hwp,short_answer,basic,common,해당 사업의 사업 기간은 얼마인가?,계약일로부터 150일,계약일로부터 150일,True,0.0

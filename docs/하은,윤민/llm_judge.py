@@ -30,6 +30,9 @@ import time
 from pathlib import Path
 from typing import Any
 
+PROJECT_ROOT = Path(__file__).resolve().parent
+DEFAULT_JUDGE_INPUT = "judge_subset_20.json"
+
 
 RAG_SEARCH_MODE = "하이브리드"
 RAG_TOP_K = 10
@@ -226,7 +229,7 @@ def _run_rag(item: dict[str, Any], chat_history: list[dict[str, str]]) -> dict[s
     import sys
     from pathlib import Path as _Path
 
-    root = _Path(__file__).resolve().parent.parent
+    root = PROJECT_ROOT
     if str(root) not in sys.path:
         sys.path.insert(0, str(root))
 
@@ -562,7 +565,7 @@ def main() -> None:
     parser.add_argument("--제한", type=int, default=0, help="0이면 전체")
     args = parser.parse_args()
 
-    root = Path(__file__).resolve().parent.parent
+    root = PROJECT_ROOT
     input_path = root / args.입력
     output_dir = root / args.출력경로
 
@@ -595,5 +598,79 @@ def main() -> None:
     print(f"\n[완료] {len(results)}문항 LLM Judge 평가")
 
 
+def cli_main() -> None:
+    parser = argparse.ArgumentParser(description="설계안 기준 LLM Judge 평가 엔진")
+    parser.add_argument(
+        "--input",
+        default=DEFAULT_JUDGE_INPUT,
+        help="평가 입력 JSON 경로(프로젝트 루트 기준 상대경로 또는 절대경로)",
+    )
+    parser.add_argument(
+        "--output-dir",
+        default="data/llm_judge/results",
+        help="결과 저장 디렉토리(프로젝트 루트 기준 상대경로 또는 절대경로)",
+    )
+    parser.add_argument("--model", default="gpt-5", help="Judge 모델명")
+    parser.add_argument("--limit", type=int, default=0, help="0이면 전체")
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="입력/출력/개수만 검증하고 실제 RAG+Judge 실행은 건너뜀",
+    )
+    args = parser.parse_args()
+
+    input_path = Path(args.input)
+    if not input_path.is_absolute():
+        input_path = PROJECT_ROOT / input_path
+
+    output_dir = Path(args.output_dir)
+    if not output_dir.is_absolute():
+        output_dir = PROJECT_ROOT / output_dir
+
+    data = json.loads(input_path.read_text(encoding="utf-8"))
+    items = data["items"]
+    if args.limit > 0:
+        items = items[: args.limit]
+
+    if args.dry_run:
+        print(
+            json.dumps(
+                {
+                    "mode": "dry-run",
+                    "input_path": str(input_path),
+                    "output_dir": str(output_dir),
+                    "model": args.model,
+                    "item_count": len(items),
+                },
+                ensure_ascii=False,
+                indent=2,
+            )
+        )
+        return
+
+    print(f"[로드] {len(items)}문항 | 모델: {args.model}")
+    print("=" * 60)
+
+    results = run_judge(items, model=args.model)
+    summary = aggregate(results)
+    report = build_report(results, summary, model=args.model)
+
+    print("\n" + "=" * 60)
+    print("[집계 결과]")
+    for row in summary:
+        if row["group"] == "overall" or row["group"].startswith("judge_type:"):
+            print(
+                f"  {row['group']:24s} | pass:{row['pass_count']} review:{row['review_count']} "
+                f"fail:{row['fail_count']} avg:{row['avg_score']:.2f}"
+            )
+
+    output_dir.mkdir(parents=True, exist_ok=True)
+    save_csv(output_dir / "judge_detail.csv", results)
+    save_csv(output_dir / "judge_summary.csv", summary)
+    (output_dir / "judge_report.md").write_text(report, encoding="utf-8")
+    print(f"[저장] {output_dir / 'judge_report.md'}")
+    print(f"\n[완료] {len(results)}문항 LLM Judge 평가")
+
+
 if __name__ == "__main__":
-    main()
+    cli_main()

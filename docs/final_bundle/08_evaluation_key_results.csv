@@ -1,0 +1,9 @@
+﻿version,old_auto_accuracy,new_v41_strict_accuracy,new_v41_tolerant_accuracy,llm_judge_reference,judge_rank_note,auto_note,source_path
+B-00 raw baseline,0.6471,0.5000,0.6441,3.2500,"중간권","old auto에서는 초기 baseline이 높게 나와 장문 서비스 답변 발전을 반영하지 못함","C:\Users\UserK\Downloads\중급프로젝트\rag_outputs\eval_pipeline\auto_grader_v41_compare.csv"
+B-01,0.4676,0.5059,0.6706,3.2000,"중간권","v4.1 tolerant에서 B-01이 가장 높아 judge 흐름과 완전 정렬되지는 않음","C:\Users\UserK\Downloads\중급프로젝트\rag_outputs\eval_pipeline\auto_grader_v41_compare.csv"
+B-02,0.4735,0.4853,0.6471,2.9250,"judge subset 최저","v4.1에서 old 대비 개선됐지만 judge subset과 방향 차이 존재","C:\Users\UserK\Downloads\중급프로젝트\rag_outputs\eval_pipeline\auto_grader_v41_compare.csv"
+B-06 exact,0.3529,0.4294,0.5647,3.3250,"상승","장문 답변 영향으로 old auto가 과도하게 낮았고 v4.1에서 일부 회복","C:\Users\UserK\Downloads\중급프로젝트\rag_outputs\eval_pipeline\auto_grader_v41_compare.csv"
+phase2 baseline_v2,0.3588,0.4294,0.5706,3.2250,"소폭 하락","v4.1에서 old 대비 회복. factual 측정기 역할로 제한 해석 필요","C:\Users\UserK\Downloads\중급프로젝트\rag_outputs\eval_pipeline\auto_grader_v41_compare.csv"
+baseline_v3 OCR v4 router off,0.3441,0.4265,0.5618,3.5250,"judge 최고","old auto에서 unfair하게 낮았던 점수가 v4.1 tolerant에서 회복됐으나 judge 최고 흐름과 완전 정렬은 아님","C:\Users\UserK\Downloads\중급프로젝트\rag_outputs\eval_pipeline\auto_grader_v41_compare.csv"
+factual_mode,constrained_or_extractor_partial,,,,,"최종 점수 아님","factual mode runner와 설계 문서는 존재하지만 일부 run이 partial/incomplete라 최종 비교표에는 참고로만 사용","C:\Users\UserK\Downloads\중급프로젝트\rag_outputs\eval_pipeline\auto_eval_factual_mode_design.md"
+

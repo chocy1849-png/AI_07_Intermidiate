@@ -1,0 +1,176 @@
+defaults:
+  device_map: auto
+  torch_dtype: bfloat16
+  trust_remote_code: false
+  max_new_tokens: 768
+  temperature: 0.0
+  top_p: 1.0
+  repetition_penalty: 1.05
+  use_chat_template: true
+  stop_sequences: []
+  extra_generate_kwargs: {}
+
+embedding_defaults:
+  normalize_embeddings: true
+  query_prefix: ""
+  document_prefix: ""
+  encode_kwargs: {}
+  screening_only: false
+  note: ""
+
+embedding_backends:
+  openai_text_embedding_3_small:
+    backend: openai
+    model_name: text-embedding-3-small
+    collection_name: rfp_contextual_chunks_v2_b02
+    bm25_index_name: bm25_index_b02.pkl
+    screening_only: true
+    note: "Scenario A Step 2A screening only"
+
+  openai_text_embedding_3_small_pilot_ocr:
+    backend: openai
+    model_name: text-embedding-3-small
+    collection_name: rfp_contextual_chunks_v2_pilot_ocr
+    bm25_index_name: bm25_index_phase2_pilot_ocr.pkl
+    screening_only: false
+    note: "Phase2 OCR pilot table/body corpus"
+
+  openai_text_embedding_3_small_ocr_aug_a:
+    backend: openai
+    model_name: text-embedding-3-small
+    collection_name: rfp_contextual_chunks_v2_ocr_aug_a
+    bm25_index_name: bm25_index_phase2_ocr_aug_a.pkl
+    screening_only: false
+    note: "Phase2 OCR augment A: structural enrichment only"
+
+  openai_text_embedding_3_small_ocr_aug_b:
+    backend: openai
+    model_name: text-embedding-3-small
+    collection_name: rfp_contextual_chunks_v2_ocr_aug_b
+    bm25_index_name: bm25_index_phase2_ocr_aug_b.pkl
+    screening_only: false
+    note: "Phase2 OCR augment B: structural + image_ocr"
+
+  openai_text_embedding_3_small_ocr_aug_c:
+    backend: openai
+    model_name: text-embedding-3-small
+    collection_name: rfp_contextual_chunks_v2_ocr_aug_c
+    bm25_index_name: bm25_index_phase2_ocr_aug_c.pkl
+    screening_only: false
+    note: "Phase2 OCR augment C: structural + image_ocr + selected discarded hints"
+
+  openai_text_embedding_3_small_true_table_ocr:
+    backend: openai
+    model_name: text-embedding-3-small
+    collection_name: rfp_contextual_chunks_v2_true_table_ocr
+    bm25_index_name: bm25_index_phase2_true_table_ocr.pkl
+    screening_only: false
+    note: "Phase2 true HWP table OCR augment corpus (baseline+augment only)"
+
+  openai_text_embedding_3_small_true_table_ocr_v2:
+    backend: openai
+    model_name: text-embedding-3-small
+    collection_name: rfp_contextual_chunks_v2_true_table_ocr_v2
+    bm25_index_name: bm25_index_phase2_true_table_ocr_v2.pkl
+    screening_only: false
+    note: "Phase2 true HWP table OCR v2 corpus (HWP COM PDF render + PP-StructureV3 bbox crop)"
+
+  openai_text_embedding_3_small_true_table_ocr_v21:
+    backend: openai
+    model_name: text-embedding-3-small
+    collection_name: rfp_contextual_chunks_v2_true_table_ocr_v21
+    bm25_index_name: bm25_index_phase2_true_table_ocr_v21.pkl
+    screening_only: false
+    note: "Phase2 true HWP table OCR v2.1 corpus (group_bc stabilization tuning)"
+
+  openai_text_embedding_3_small_true_table_ocr_v3:
+    backend: openai
+    model_name: text-embedding-3-small
+    collection_name: rfp_contextual_chunks_v2_true_table_ocr_v3
+    bm25_index_name: bm25_index_phase2_true_table_ocr_v3.pkl
+    screening_only: false
+    note: "Phase2 true HWP table OCR v3 corpus (question-type gated OCR routing + structured evidence chunks)"
+
+  openai_text_embedding_3_small_true_table_ocr_v4:
+    backend: openai
+    model_name: text-embedding-3-small
+    collection_name: rfp_contextual_chunks_v2_true_table_ocr_v4
+    bm25_index_name: bm25_index_phase2_true_table_ocr_v4.pkl
+    screening_only: false
+    note: "Phase2 true HWP table OCR v4 corpus (table_factual exact extraction optimization)"
+
+  koe5:
+    backend: hf_sentence_transformer
+    model_name: nlpai-lab/KoE5
+    collection_name: rfp_scenario_a_koe5_b02
+    bm25_index_name: bm25_index_scenario_a_koe5.pkl
+    query_prefix: "query: "
+    document_prefix: "passage: "
+    note: "Scenario A default embedding"
+
+  bge_m3:
+    backend: hf_sentence_transformer
+    model_name: BAAI/bge-m3
+    collection_name: rfp_scenario_a_bgem3_b02
+    bm25_index_name: bm25_index_scenario_a_bgem3.pkl
+    note: "Scenario A optional embedding ablation"
+
+models:
+  gpt5mini_api:
+    adapter: openai_chat
+    model_id: gpt-5-mini
+    tokenizer_id: null
+    runtime: openai
+    trust_remote_code: false
+    stop_sequences: []
+
+  qwen:
+    adapter: qwen
+    model_id: Qwen/Qwen2.5-7B-Instruct
+    tokenizer_id: null
+    runtime: transformers
+    trust_remote_code: false
+    stop_sequences:
+      - <|im_end|>
+
+  qwen_ft_v1:
+    adapter: qwen
+    model_id: rag_outputs/qwen_ft_main_experiment_v1/adapter
+    tokenizer_id: rag_outputs/qwen_ft_main_experiment_v1/adapter
+    runtime: transformers
+    trust_remote_code: false
+    stop_sequences:
+      - <|im_end|>
+
+  gemma4_e4b:
+    adapter: gemma4
+    model_id: google/gemma-4-E4B-it
+    tokenizer_id: null
+    runtime: transformers
+    trust_remote_code: false
+    stop_sequences: []
+
+  gemma4_e2b:
+    adapter: gemma4
+    model_id: google/gemma-4-E2B-it
+    tokenizer_id: null
+    runtime: transformers
+    trust_remote_code: false
+    stop_sequences: []
+
+  gemma4_26b_a4b:
+    adapter: gemma4
+    model_id: google/gemma-4-26B-A4B-it
+    tokenizer_id: null
+    runtime: transformers
+    trust_remote_code: false
+    stop_sequences: []
+
+  exaone:
+    adapter: exaone
+    model_id: EXAONE-3.5-7.8B-Instruct
+    tokenizer_id: null
+    runtime: ollama
+    ollama_model_name: SET_ME_EXAONE_OLLAMA_MODEL
+    trust_remote_code: true
+    stop_sequences: []

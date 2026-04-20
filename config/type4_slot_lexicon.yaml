@@ -1,0 +1,88 @@
+allowed_slots:
+  phone_number:
+    aliases:
+      - 담당자 휴대폰 번호
+      - 실무자 휴대폰 번호
+      - 운영 담당자 휴대폰 번호
+      - 개인 연락처
+      - 개인 휴대폰 번호
+      - 담당자 연락처
+    support_patterns:
+      - '(?<!\d)(01[016789])[- ]?\d{3,4}[- ]?\d{4}(?!\d)'
+      - '(?<!\d)0\d{1,2}[- ]?\d{3,4}[- ]?\d{4}(?!\d)'
+  internal_account:
+    aliases:
+      - 내부 시스템 계정
+      - 관리자 계정
+      - 운영 계정
+      - 내부 로그인 계정
+    support_patterns:
+      - '(계정|아이디|ID|비밀번호|패스워드)'
+  production_url:
+    aliases:
+      - 실제 운영 URL
+      - 운영 중인 URL
+      - 실서비스 URL
+      - 실제 접속 주소
+      - 실제 시스템 URL
+    support_patterns:
+      - 'https?://'
+      - 'www\.'
+      - '(url|주소)'
+  service_ip:
+    aliases:
+      - 실제 운영 IP
+      - 서비스 IP
+      - 운영 서버 IP
+    support_patterns:
+      - '(?<!\d)(?:\d{1,3}\.){3}\d{1,3}(?!\d)'
+  actual_user_count:
+    aliases:
+      - 실제 사용자 수
+      - 운영 사용자 수
+      - 현재 사용자 수
+      - 실제 이용자 수
+    support_patterns:
+      - '(사용자 수|이용자 수|회원 수|접속자 수|활성 사용자)'
+  developer_count:
+    aliases:
+      - 실제 투입 개발자 수
+      - 실제 참여 개발자 수
+      - 운영 인력 수
+      - 유지보수 인력 수
+    support_patterns:
+      - '(개발자 수|투입 인력|참여 인력|운영 인력|상주 인력)'
+  satisfaction_score:
+    aliases:
+      - 완료 후 만족도
+      - 이용자 만족도
+      - 만족도 점수
+      - 만족도 조사 결과
+    support_patterns:
+      - '(만족도|설문|평가 점수|score)'
+  performance_metric:
+    aliases:
+      - 구축 완료 후 실제 성과
+      - 실제 운영 성과
+      - KPI 달성 결과
+      - 실제 성과 수치
+    support_patterns:
+      - '(성과|운영 성과|실적|KPI|지표 달성|효과)'
+  vendor_after_award:
+    aliases:
+      - 낙찰 이후 실제 협력업체
+      - 실제 수행업체
+      - 실제 협력사
+      - 낙찰 업체명
+    support_patterns:
+      - '(낙찰|협력업체|협력사|수행업체|컨소시엄|계약 상대자)'
+forbidden_slots:
+  - 문의처
+  - 제출처
+  - 대표 이메일
+  - 사업기간
+  - 예산
+  - 참가자격
+  - 평가기준
+  - 제출서류
+  - 일정

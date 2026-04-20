@@ -23,6 +23,9 @@ import warnings
 from pathlib import Path
 from typing import Any
 
+PROJECT_ROOT = Path(__file__).resolve().parent
+DEFAULT_QBANK_FILE = "(260417) PartA_RFP_AutoGrading_QBank_v3_fixed.json"
+
 
 # ============================================================
 # 1. JSON 로더
@@ -410,7 +413,7 @@ def ask_rag(question: str, document_name: str = "", choices: list | None = None,
     choices가 있으면 질문에 선택지를 포함하여 객관식 답변을 유도."""
     import sys
     from pathlib import Path as _Path
-    _root = _Path(__file__).resolve().parent.parent
+    _root = PROJECT_ROOT
     if str(_root) not in sys.path:
         sys.path.insert(0, str(_root))
     from dotenv import load_dotenv
@@ -481,6 +484,7 @@ def run_evaluation(
         })
 
         status = "✓" if is_correct else "✗"
+        status = "OK" if is_correct else "FAIL"
         print(f"  [{status}] {item['id']} | {item['question_type']} | {item['difficulty']}")
 
     return results
@@ -547,7 +551,7 @@ def main():
     parser = argparse.ArgumentParser(description="자동평가 채점 엔진")
     parser.add_argument(
         "--문제은행",
-        default="data/PartA_RFP_AutoGrading_QBank_sample.json",
+        default=DEFAULT_QBANK_FILE,
         help="문제은행 JSON 경로",
     )
     parser.add_argument(
@@ -570,7 +574,7 @@ def main():
     args = parser.parse_args()
 
     # 경로 설정
-    base_dir = Path(__file__).resolve().parent.parent
+    base_dir = PROJECT_ROOT
     qbank_path = base_dir / args.문제은행
     output_dir = base_dir / args.출력경로
 
@@ -605,5 +609,59 @@ def main():
     print(f"\n[완료] 총 {len(results)}문항 평가")
 
 
+def cli_main() -> None:
+    parser = argparse.ArgumentParser(description="자동평가 채점 엔진")
+    parser.add_argument(
+        "--question-bank",
+        default=DEFAULT_QBANK_FILE,
+        help="문제은행 JSON 경로(프로젝트 루트 기준 상대경로 또는 절대경로)",
+    )
+    parser.add_argument(
+        "--mode",
+        choices=["verify", "dummy", "rag"],
+        default="verify",
+        help="verify(정답 기반 검증), dummy(더미 응답), rag(실제 파이프라인)",
+    )
+    parser.add_argument("--limit", type=int, default=0, help="0이면 전체, 정수면 앞에서부터 N문항")
+    parser.add_argument(
+        "--output-dir",
+        default="data/eval_results",
+        help="결과 CSV 저장 디렉토리(프로젝트 루트 기준 상대경로 또는 절대경로)",
+    )
+    args = parser.parse_args()
+
+    qbank_path = Path(args.question_bank)
+    if not qbank_path.is_absolute():
+        qbank_path = PROJECT_ROOT / qbank_path
+
+    output_dir = Path(args.output_dir)
+    if not output_dir.is_absolute():
+        output_dir = PROJECT_ROOT / output_dir
+
+    mode_map = {"verify": "검증", "dummy": "더미", "rag": "rag"}
+    selected_mode = mode_map[args.mode]
+    ask_fn = {
+        "검증": ask_with_ground_truth,
+        "더미": ask_dummy,
+        "rag": ask_rag,
+    }[selected_mode]
+
+    items = load_question_bank(qbank_path)
+    print(f"\n[실행] mode={args.mode}({selected_mode}), 문항수={len(items)}")
+    print("=" * 60)
+
+    results = run_evaluation(items, ask_fn, limit=args.limit)
+    summary = aggregate(results)
+
+    print("\n" + "=" * 60)
+    print("[집계 결과]")
+    for row in summary:
+        print(f"  {row['group']:30s} | {row['correct']}/{row['total']} = {row['accuracy']:.1%}")
+
+    save_csv(output_dir / "eval_detail.csv", results)
+    save_csv(output_dir / "eval_summary.csv", summary)
+    print(f"\n[완료] 총 {len(results)}문항 평가")
+
+
 if __name__ == "__main__":
-    main()
+    cli_main()

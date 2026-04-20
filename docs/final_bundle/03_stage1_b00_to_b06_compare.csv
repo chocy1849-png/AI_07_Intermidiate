@@ -1,0 +1,10 @@
+﻿stage,variant,score_source,overall_manual_mean,type2_manual_mean,type4_or_rejection,avg_latency_sec,status,key_note,source_path
+B-00,raw_baseline,llm_judge_20_subset,3.2500,,,"",baseline,"초기 raw baseline. 20문항 Judge 기준이며 full45와 직접 동일 비교 금지","C:\Users\UserK\Downloads\중급프로젝트\rag_outputs\eval_pipeline\llm_judge_compare.csv"
+B-01,hybrid_retrieval,full45_manual,4.4944,3.9000,0.7000,"",adopted_base,"Dense+BM25 hybrid. B-02 직전 기준","C:\Users\UserK\Downloads\중급프로젝트\rag_outputs\b02_b01_compare.csv"
+B-02,prefix_v2,full45_manual,4.6611,4.1000,0.8000,29.9100,adopted,"구조화 prefix/contextual retrieval 기본선","C:\Users\UserK\Downloads\중급프로젝트\rag_outputs\b02_b01_compare.csv"
+B-03a,crag_conditional_candidate,full45_manual,4.5444,4.5000,4.1750,31.0500,conditional,"Type2는 상승했지만 전체/Type3/Type4 하락으로 조건부만 유지","C:\Users\UserK\Downloads\중급프로젝트\rag_outputs\b03_b02_compare.csv"
+B-04,chunk_1200_160,full45_manual,4.4944,4.0000,"",41.6000,rejected,"mini winner였으나 full45에서 B-02 대비 하락 및 latency 증가","C:\Users\UserK\Downloads\중급프로젝트\rag_outputs\b04_full_compare.csv"
+B-05,table_xml_enrichment_v1,full45_manual,4.4500,4.0500,4.2750,33.8400,rejected,"표 일부 가능성은 있으나 full45/Type4 하락으로 미채택","C:\Users\UserK\Downloads\중급프로젝트\rag_outputs\b05_full_compare.csv"
+B-06,gpt5mini_operational,full45_manual,4.4222,3.8500,0.9000,28.5800,operational,"운영 기준 generator. soft/high-cost 모델 비교의 기준","C:\Users\UserK\Downloads\중급프로젝트\rag_outputs\b06_compare.csv"
+B-06,gpt5_ceiling,full45_manual,4.6278,4.2000,0.9000,24.1100,ceiling,"동일 계열 pipeline에서 generator만 gpt-5로 교체한 ceiling","C:\Users\UserK\Downloads\중급프로젝트\rag_outputs\b06_compare.csv"
+

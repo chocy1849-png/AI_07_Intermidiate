@@ -1,0 +1,158 @@
+project:
+  name: rfp_rag_phase2
+  default_embedding_backend: openai_text_embedding_3_small
+  default_model_key: gpt5mini_api
+  default_routing_model: gpt-5-mini
+  default_judge_model: gpt-5
+
+evaluation_sets:
+  full_45:
+    question_set_path: docs/planning/pm/day3_partA_eval_questions_v1.txt
+  mini_12:
+    question_set_path: docs/planning/pm/day3_partA_eval_questions_v1.txt
+    question_id_file: docs/planning/pm/day4_mini_eval_question_ids_v1.txt
+  table_15:
+    question_set_path: rag_outputs/eval_sets/b05_table_eval_questions_v2.csv
+  group_bc:
+    question_set_path: rag_outputs/eval_sets/b05_group_bc_questions_v1.csv
+
+experiments:
+  baseline:
+    description: "P0 baseline on phase2 candidate base (no metadata-aware, no normalized BM25, no soft-crag)."
+    options:
+      enable_controlled_query_expansion: true
+      enable_normalized_bm25: false
+      enable_metadata_aware_retrieval: false
+      enable_table_body_pairing: true
+      enable_soft_crag_lite: false
+      expansion_query_limit: 1
+      expansion_query_weight: 0.35
+      normalized_bm25_weight: 0.35
+      soft_crag_top_n: 6
+      soft_crag_score_weight: 0.045
+      soft_crag_keep_k: 3
+
+  metadata_boost:
+    description: "P0 ablation: metadata-aware retrieval soft boost only."
+    options:
+      enable_controlled_query_expansion: true
+      enable_normalized_bm25: false
+      enable_metadata_aware_retrieval: true
+      enable_table_body_pairing: true
+      enable_soft_crag_lite: false
+      expansion_query_limit: 1
+      expansion_query_weight: 0.35
+      normalized_bm25_weight: 0.35
+      soft_crag_top_n: 6
+      soft_crag_score_weight: 0.045
+      soft_crag_keep_k: 3
+
+  normalized_bm25:
+    description: "P0 ablation: normalized BM25 auxiliary retriever only."
+    options:
+      enable_controlled_query_expansion: true
+      enable_normalized_bm25: true
+      enable_metadata_aware_retrieval: false
+      enable_table_body_pairing: true
+      enable_soft_crag_lite: false
+      expansion_query_limit: 1
+      expansion_query_weight: 0.35
+      normalized_bm25_weight: 0.35
+      soft_crag_top_n: 6
+      soft_crag_score_weight: 0.045
+      soft_crag_keep_k: 3
+
+  combined:
+    description: "P0 candidate: metadata-aware + normalized BM25 combined."
+    options:
+      enable_controlled_query_expansion: true
+      enable_normalized_bm25: true
+      enable_metadata_aware_retrieval: true
+      enable_table_body_pairing: true
+      enable_soft_crag_lite: false
+      expansion_query_limit: 1
+      expansion_query_weight: 0.35
+      normalized_bm25_weight: 0.35
+      soft_crag_top_n: 6
+      soft_crag_score_weight: 0.045
+      soft_crag_keep_k: 3
+
+  b02_reference:
+    description: "Legacy B-02/B-03a reference (kept for compatibility)."
+    options:
+      enable_controlled_query_expansion: false
+      enable_normalized_bm25: false
+      enable_metadata_aware_retrieval: false
+      enable_table_body_pairing: false
+      enable_soft_crag_lite: false
+
+  phase2_baseline_v1:
+    description: "B-06 exact answer-layer parity + metadata_t4off_half (current phase2 baseline)."
+    options:
+      enable_controlled_query_expansion: false
+      enable_normalized_bm25: false
+      enable_metadata_aware_retrieval: true
+      enable_table_body_pairing: false
+      enable_soft_crag_lite: false
+      metadata_disable_for_rejection: true
+      metadata_boost_scale: 0.5
+      metadata_scope_mode: all
+      normalized_bm25_mode: all
+
+  phase2_baseline_v2:
+    description: "B-06 exact answer-layer parity + metadata_t4off_half + comparison_helper_only."
+    options:
+      enable_controlled_query_expansion: false
+      enable_normalized_bm25: false
+      enable_metadata_aware_retrieval: true
+      enable_table_body_pairing: false
+      enable_soft_crag_lite: false
+      metadata_disable_for_rejection: true
+      metadata_boost_scale: 0.5
+      metadata_scope_mode: all
+      normalized_bm25_mode: all
+      enable_comparison_evidence_helper: true
+      comparison_helper_doc_bonus: 0.0045
+      comparison_helper_axis_bonus: 0.0015
+      comparison_helper_max_per_doc: 2
+
+  comparison_safe_shadow:
+    description: "B-06 exact + metadata_t4off shadow profile for comparison-safe monitoring."
+    options:
+      enable_controlled_query_expansion: false
+      enable_normalized_bm25: false
+      enable_metadata_aware_retrieval: true
+      enable_table_body_pairing: false
+      enable_soft_crag_lite: false
+      metadata_disable_for_rejection: true
+      metadata_boost_scale: 1.0
+      metadata_scope_mode: all
+      normalized_bm25_mode: all
+
+  reject:
+    description: "metadata_t4off_scoped profile for rejection-focused checks."
+    options:
+      enable_controlled_query_expansion: false
+      enable_normalized_bm25: false
+      enable_metadata_aware_retrieval: true
+      enable_table_body_pairing: false
+      enable_soft_crag_lite: false
+      metadata_disable_for_rejection: true
+      metadata_boost_scale: 0.5
+      metadata_scope_mode: comparison_and_explicit_factual
+      normalized_bm25_mode: all
+
+  phase2_candidate_default:
+    description: "Alias of combined for compatibility."
+    options:
+      enable_controlled_query_expansion: true
+      enable_normalized_bm25: true
+      enable_metadata_aware_retrieval: true
+      enable_table_body_pairing: true
+      enable_soft_crag_lite: false
+      expansion_query_limit: 1
+      expansion_query_weight: 0.35
+      normalized_bm25_weight: 0.35
+      soft_crag_top_n: 6
+      soft_crag_score_weight: 0.045
+      soft_crag_keep_k: 3

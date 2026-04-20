@@ -51,8 +51,17 @@ id_rsa*
 # ===== 원본 데이터 (외부 공유 금지) =====
 data/raw/
 *.hwp
+*.hwpx
 *.pdf
+!docs/report/final_report.pdf
+!docs/report/RFP_final_report.pdf
+*.doc
+*.docx
 data_list.csv
+files/
+**/files/
+original_data/
+raw_data/
 
 # ===== 모델 파일 (용량 큼) =====
 *.pt
@@ -60,6 +69,10 @@ data_list.csv
 *.safetensors
 *.onnx
 models/
+adapter/
+checkpoint-*/
+wandb/
+runs/
 
 # ===== Vector DB 로컬 저장 파일 =====
 chroma_db/
@@ -68,9 +81,14 @@ faiss_index/
 rag_outputs/
 processed_data/
 rfp_rag_chroma_db/
+rfp_rag_chroma_db*/
 tmp_hwp5html*/
 *.pkl
 *.pickle
+*.sqlite
+*.sqlite3
+*.db
+*.duckdb
 _codex_patch.ps1
 
 # ===== 기타 =====
