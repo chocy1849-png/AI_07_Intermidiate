@@ -3,6 +3,8 @@
 정부·공공 RFP/HWP/PDF 문서를 대상으로 한국어 RAG 챗봇을 구축하고, 검색·문맥·표 OCR·평가 체계를 단계적으로 고도화한 중급 프로젝트입니다.
 본 리포지토리는 LMS 제출용 GitHub Repository이며, **원본 RFP 문서와 API key, Chroma DB, 대용량 산출물은 포함하지 않습니다.**
 
+협업일지 링크 : https://www.notion.so/3367f345c16a803f9f8ed3765b0e42d9
+
 ## 제출물 바로가기
 
 | 항목 | 경로 | 설명 |
